@@ -536,3 +536,115 @@
     max-width:300px; /* Adjust the logo's maximum width as needed */
     margin-left: 10px; /* Adjust the spacing between the text and logo */
   }
+
+
+  
+/* whatsapp icon */
+.icon-bar a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 20px;
+}
+.icon-bar {
+    position: fixed;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 100;
+}
+.whatsapp {
+    background: #43bf5138;
+    border-radius: 0 46% 46% 0;
+}
+.btn-check:checked+.btn-outline-dark, .btn-check:active+.btn-outline-dark, .btn-outline-dark:active, .btn-outline-dark.active, .btn-outline-dark.dropdown-toggle.show {
+    color: #fff;
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+.btn-outline-dark:hover {
+    color: #fff;
+    background-color: var(--primary);
+    border-color:var(--primary);
+}
+
+/*Our Jorney*/
+.blog-content h2, h3, h4 {
+    margin-bottom: 10px!important;
+    margin-top: 30px!important;
+}
+
+/*Core Ethics*/
+.text-white {
+    color: #fff !important;
+}
+.value .inner-box h3 {
+    font-size: 1em;
+    color: #000;
+    font-weight: 600;
+    margin: 20px 0;
+}
+.value .inner-box {
+    text-align: center;
+    margin: 1rem 0;
+}
+.section-header h2 {
+    
+    color: #333;
+    font-size: 1.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* loader */
+#spinner {
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 9999;
+  }
+  
+  .loader-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 4rem;
+    height: 4rem;
+    animation: spin 1s linear infinite;
+    border: 0.25rem solid #ccc;
+    border-top-color: #007bff;
+    border-radius: 50%;
+  }
+  
+  .loader-logo {
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+  }
+  
+  
+  @keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+ 
+
+  .carousel-inner {
+    height: 700px; /* Set your desired height for the carousel */
+}
+
+.carousel-item img {
+    height: 100%; /* Make images fill the height of the carousel */
+    object-fit: cover; /* Ensure images cover the entire container */
+}

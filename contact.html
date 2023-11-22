@@ -9,7 +9,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/favicon.png" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,7 +34,9 @@
 <body>
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+        <div class="loader-container">
+            <img src="img/favicon.png" alt="Logo" class="loader-logo">
+        </div>
     </div>
     <!-- Spinner End -->
 
@@ -53,7 +55,7 @@
                     <div class="navbar-nav ms-auto">
                         <a href="index.html" class="nav-item nav-link">Home</a>
                         <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="product.html" class="nav-item nav-link">Products</a>
+                        <a href="product.html" class="nav-item nav-link">Catalog</a>
                           <!-- <a href="store.html" class="nav-item nav-link">Store</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
@@ -89,7 +91,13 @@
     </div>
     <!-- Page Header End -->
 
-
+    <!-- whatsappicon start -->
+    <div class="icon-bar">
+        <a href="https://api.whatsapp.com/send?phone=+918000077955&amp;text=Hello, Giotech Solar" target="_blank" class="whatsapp">
+            <img src="img/whatsapp/whatsapp.svg" style="width: 60px; height: 60px;">
+        </a>
+    </div>
+    <!-- whatsappicon End -->
     <!-- Contact Start -->
     <div class="container-xxl contact py-5">
         <div class="container">
@@ -157,11 +165,14 @@
                     </form>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="h-100">
-                        <iframe class="w-100 rounded"
+                    <div  class="w-100 rounded">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.4755258078208!2d72.83838607424481!3d21.212983981427556!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f5acdf99e15%3A0xfb4f30664430ff8a!2sPrecision%20Weather%20Strip!5e0!3m2!1sen!2sin!4v1700639973112!5m2!1sen!2sin" 
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                        <!-- <iframe class="w-100 rounded"
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
                         frameborder="0" style="height: 100%; min-height: 300px; border:0;" allowfullscreen="" aria-hidden="false"
-                        tabindex="0"></iframe>
+                        tabindex="0"></iframe> -->
                     </div>
                 </div>
             </div>
@@ -176,8 +187,10 @@
             <div class="row g-5">
                 <div class="col-lg-5 col-md-6">
                     <h4 class="text-primary mb-4">Our Office</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>123 Street, New York, USA</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i>+012 345 67890</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>11-13, Laxminarayan Compound, Kabirwadi, Nr. Vishwakarma Glass, Opp. Umiyadham Temple,A.K Road, Surat - 395008, Gujarat, India.</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i>+91 8000077955</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i>+91 9898377955</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i>+91 9510294013</p>
                     <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>precidion_weatherstrip@yahoo.com</p>
                     <div class="d-flex pt-3">
                         <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a>
@@ -188,11 +201,11 @@
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-primary mb-4">Quick Links</h4>
-                    <a class="btn btn-link" href="">About Us</a>
-                    <a class="btn btn-link" href="">Contact Us</a>
-                    <a class="btn btn-link" href="">Our Services</a>
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <!-- <a class="btn btn-link" href="">Our Services</a>
                     <a class="btn btn-link" href="">Terms & Condition</a>
-                    <a class="btn btn-link" href="">Support</a>
+                    <a class="btn btn-link" href="">Support</a> -->
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <h4 class="text-primary mb-4">Business Hours</h4>
@@ -203,6 +216,7 @@
                     <p class="mb-1">Sunday</p>
                     <h6 class="text-light">Closed</h6>
                 </div>
+                
             </div>
         </div>
     </div>
