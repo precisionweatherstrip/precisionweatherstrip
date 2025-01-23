@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-    --primary: #88B44E;
+    --primary: #a1a1a1;
     --secondary: #FB9F38;
     --light: #F5F8F2;
     --dark: #252C30;
@@ -121,7 +121,11 @@
     vertical-align: middle;
     margin-left: 8px;
 }
-
+@media (max-width:576px) {
+    #logo {
+        max-width: 180px !important;
+    }
+}
 @media (max-width: 991.98px) {
     .navbar .navbar-brand {
         width: 126px;
@@ -648,4 +652,3 @@
     height: 100%; /* Make images fill the height of the carousel */
     object-fit: cover; /* Ensure images cover the entire container */
 }
-
