@@ -292,14 +292,13 @@
     color: var(--primary);
 }
 /*description start*/
-.product-desc {
-    min-height: 80px;      
+.product-desc{
+    min-height: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
-.product-desc h5 {
+.product-desc h5{
     font-size: 16px;
     line-height: 1.3;
     margin: 0;
