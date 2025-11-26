@@ -14,7 +14,7 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700;900&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -29,6 +29,85 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <!-- Small local tweaks for catalog section -->
+    <style>
+      /* make right column a full-height column and push buttons to bottom */
+      .catalog-open .col-md-6.right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 420px; /* match image height so buttons sit at bottom */
+      }
+      /* nudge the heading slightly up and control spacing to the paragraph */
+      .catalog-open h3 {
+        margin-top: -8px;
+        margin-bottom: 0.4rem;
+      }
+      .catalog-open .content p {
+        margin-bottom: 0.75rem;
+      }
+      /* small extra spacing at the bottom for the buttons */
+      .catalog-open .buttons {
+        margin-bottom: 6px;
+      }
+
+      /* custom download button color (#FECC01) */
+      .catalog-open .buttons .btn-download {
+        display: inline-block;
+        background-color: #FECC01;
+        border-color: #FECC01;
+        color: #000;
+      }
+      .catalog-open .buttons .btn-download:hover,
+      .catalog-open .buttons .btn-download:focus {
+        background-color: #e6bf08;
+        border-color: #e6bf08;
+        color: #000;
+        text-decoration: none;
+        box-shadow: none;
+      }
+
+      /* view button: black border, on hover turn #FECC01 */
+      .catalog-open .buttons .btn-view {
+        display: inline-block;
+        background-color: transparent;
+        border: 1px solid #000;
+        color: #000;
+      }
+      .catalog-open .buttons .btn-view:hover,
+      .catalog-open .buttons .btn-view:focus {
+        background-color: #FECC01;
+        border-color: #FECC01;
+        color: #000;
+        text-decoration: none;
+        box-shadow: none;
+      }
+
+            /* Ensure product carousel images are uniform squares */
+            .product-item img {
+                width: 220px;
+                height: 360px;
+                object-fit: cover;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            /* Smaller images on narrow viewports */
+            @media (max-width: 576px) {
+                .product-item img {
+                    width: 140px;
+                    height: 260px;
+                }
+            }
+
+            /* Use Poppins for the page header h1 */
+            .page-header h1 {
+                font-family: 'Poppins', sans-serif;
+                font-weight: 600;
+            }
+    </style>
 </head>
 
 <body>
@@ -95,7 +174,7 @@
     <!-- whatsappicon start -->
     <div class="icon-bar">
         <a href="https://api.whatsapp.com/send?phone=+918000077955&amp;text=Hello" target="_blank" class="whatsapp">
-            <img src="img/whatsapp/whatsapp.svg" style="width: 60px; height: 60px;">
+            <img src="img/whatsapp/whatsapp.svg" style="width: 40px; height: 40px;">
         </a>
     </div>
     <!-- whatsappicon End -->
@@ -109,43 +188,135 @@
         </div>
 
         <div class="owl-carousel product-carousel wow fadeInUp" data-wow-delay="0.5s">
-            
-            <!-- Product Item -->
+
+            <!-- 1 -->
             <a href="#" class="d-block product-item rounded text-center">
-                <img src="img/Product/catalog/c1.png" alt="Weather Strip">
+                <img src="img/1.webp" alt="NON SILICONISED PILE WEATHER STRIP [NS]">
                 <div class="bg-white text-center p-3 position-relative mt-n4 mx-3 product-desc">
-                    <h5 class="text-primary mb-0">Weather Strip</h5>
+                    <h5 class="text-primary mb-0">NON SILICONISED PILE WEATHER STRIP [NS]</h5>
                 </div>
             </a>
 
+            <!-- 2 -->
             <a href="#" class="d-block product-item rounded text-center">
-                <img src="img/Product/catalog/c4.png" alt="NS Weather Strip">
+                <img src="img/2.webp" alt="NON SILICONISED HIGH DENSITY PILE WEATHER STRIP [NS HD]">
                 <div class="bg-white text-center p-3 position-relative mt-n4 mx-3 product-desc">
-                    <h5 class="text-primary mb-0">NON SILICONISED PILE WEATHER STRIP (NS)</h5>
+                    <h5 class="text-primary mb-0">NON SILICONISED HIGH DENSITY PILE WEATHER STRIP [NS HD]</h5>
                 </div>
             </a>
 
+            <!-- 3 -->
             <a href="#" class="d-block product-item rounded text-center">
-                <img src="img/Product/catalog/c5.png" alt="Straight Brush Strip">
+                <img src="img/3.webp" alt="NON SILICONISED STRAIGHT BRUSH PILE WEATHER STRIP [NS ST]">
                 <div class="bg-white text-center p-3 position-relative mt-n4 mx-3 product-desc">
-                    <h5 class="text-primary mb-0">NON SILICONISED STRAIGHT BRUSH PILE WEATHER STRIP (NS ST)</h5>
+                    <h5 class="text-primary mb-0">NON SILICONISED STRAIGHT BRUSH PILE WEATHER STRIP [NS ST]</h5>
                 </div>
             </a>
 
+            <!-- 4 -->
             <a href="#" class="d-block product-item rounded text-center">
-                <img src="img/Product/catalog/c6.png" alt="Siliconised Weather Strip">
+                <img src="img/4.webp" alt="SELF ADHESIVE NON SILICONSIED PILE WEATHER STRIP [AD NS]">
                 <div class="bg-white text-center p-3 position-relative mt-n4 mx-3 product-desc">
-                    <h5 class="text-primary mb-0">SILICONISED PILE WEATHER STRIP (SL)</h5>
+                    <h5 class="text-primary mb-0">SELF ADHESIVE NON SILICONSIED PILE WEATHER STRIP [AD NS]</h5>
                 </div>
             </a>
+
+            <!-- 5 -->
+            <a href="#" class="d-block product-item rounded text-center">
+                <img src="img/5.webp" alt="SILICONISED PILE WEATHER STRIP [SL]">
+                <div class="bg-white text-center p-3 position-relative mt-n4 mx-3 product-desc">
+                    <h5 class="text-primary mb-0">SILICONISED PILE WEATHER STRIP [SL]</h5>
+                </div>
+            </a>
+
+            <!-- 6 -->
+            <a href="#" class="d-block product-item rounded text-center">
+                <img src="img/6.webp" alt="NON-WOVEN (PP) QUIET FIN PILE WEATHER STRIP [QFIN SL UV]">
+                <div class="bg-white text-center p-3 position-relative mt-n4 mx-3 product-desc">
+                    <h5 class="text-primary mb-0">NON-WOVEN (PP) QUIET FIN PILE WEATHER STRIP [QFIN SL UV] - SILICONISED & UV STABILIZED</h5>
+                </div>
+            </a>
+
+            <!-- 7 -->
+            <a href="#" class="d-block product-item rounded text-center">
+                <img src="img/7.webp" alt="TRANSPARENT (PP) FIN PILE WEATHER STRIP [TN FIN SL UV]">
+                <div class="bg-white text-center p-3 position-relative mt-n4 mx-3 product-desc">
+                    <h5 class="text-primary mb-0">TRANSPARENT (PP) FIN PILE WEATHER STRIP [TN FIN SL UV] - SILICONISED & UV STABILIZED</h5>
+                </div>
+            </a>
+
+            <!-- 8 -->
+            <a href="#" class="d-block product-item rounded text-center">
+                <img src="img/8.webp" alt="TRI FIN PILE WEATHER STRIP [TRIFIN SL UV]">
+                <div class="bg-white text-center p-3 position-relative mt-n4 mx-3 product-desc">
+                    <h5 class="text-primary mb-0">TRI FIN PILE WEATHER STRIP [TRIFIN SL UV] - EXTRUDED, SILICONISED & UV STABILISED</h5>
+                </div>
+            </a>
+
+            <!-- 9 -->
+            <a href="#" class="d-block product-item rounded text-center">
+                <img src="img/9.webp" alt="SILICONISED WEATHER STRIP WITH BRISTLE [SL BR]">
+                <div class="bg-white text-center p-3 position-relative mt-n4 mx-3 product-desc">
+                    <h5 class="text-primary mb-0">SILICONISED WEATHER STRIP WITH BRISTLE [SL BR]</h5>
+                </div>
+            </a>
+
         </div>
     </div>
 </div>
 <!-- Products End -->
     <!-- catalog open start -->
-     <div class="catlog_open">
+     <!--<div class="catlog_open">
         <iframe src="img/catlog/PRECISION BROCHURE.pdf" width="100%" height="600px" style="border:none;"></iframe>
+     </div>-->
+
+   
+     <!-- catalog open start -->
+     <div class="container-fluid catalog-open py-5">
+        <div class="container">
+           <div class="row align-items-center">
+              <div class="col-md-6 text-center mb-4 mb-md-0">
+                 <!-- Use a preview image for the brochure; replace with a real preview if available -->
+                 <img src="img/pdf-img.png" alt="Brochure preview" class="img-fluid rounded shadow" style="max-height:420px; width: auto;">
+              </div>
+              <div class="col-md-6 right">
+                 <h3 class="text-primary">PRECISION BROCHURE</h3>
+                 <div class="content">
+                    <p class="text-muted">The PRECISION BROCHURE is a professionally designed product catalogue showcasing a detailed range of precision-engineering products. It features visually structured product layouts, technical specifications, model numbers, and images to help customers and distributors understand the complete product lineup.</p>
+                    <p class="text-muted">This catalogue offers a clear and concise overview of the available products, making it useful for technical reference, product selection, and comparison.</p>
+                    <p class="text-muted">Download our full product brochure to view specifications, sizes, and ordering information.</p>
+                 </div>
+                 <div class="buttons d-flex gap-4">
+                    <a href="Product-pdf.pdf" class="btn btn-download" target="_blank" rel="noopener noreferrer" download>
+                       <i class="fa fa-download me-2"></i>Download PDF
+                    </a>
+                    <a href="Product-pdf.pdf" class="btn btn-view" target="_blank" rel="noopener noreferrer">
+                       <i class="fa fa-eye me-2"></i>View in Browser
+                    </a>
+                 </div>
+              </div>
+           </div>
+        </div>
      </div>
+     <!-- catalog open end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
      <!-- catalog open end -->
 
     <!-- Footer Start -->

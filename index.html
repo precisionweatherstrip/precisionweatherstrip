@@ -15,7 +15,8 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700;900&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Open Sans already loaded above; added Poppins for header h1 -->
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -30,6 +31,72 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <!-- Quick fixes: remove white overlay on images and hide page spinner -->
+    <style>
+      /* Hide the full-page spinner that covers images */
+      #spinner { display: none !important; }
+
+      /* Ensure carousel items are positioned for pseudo elements */
+      #header-carousel .carousel-item { position: relative; }
+
+      /* Add a white translucent overlay only to the first carousel item */
+      #header-carousel .carousel-item:first-child::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(255,255,255,0.65); /* change .65 to desired opacity */
+        z-index: 1;
+      }
+
+      /* Keep carousel captions above the overlay */
+      #header-carousel .carousel-caption,
+      #header-carousel .carousel-caption .container { 
+        background: transparent !important;
+        z-index: 2;
+      }
+
+      /* Ensure images are fully opaque */
+      #header-carousel .carousel-item img { opacity: 1 !important; filter: none !important; }
+
+            /* Use Poppins for the homepage header caption */
+            #header-carousel .carousel-caption h1 {
+                font-family: 'Poppins', sans-serif;
+                font-weight: 600;
+            }
+    </style>
+        <style>
+            /* Make feature/card images smaller and consistent */
+            .card-custom .me-3 img {
+                width: 36px;
+                height: 36px;
+                object-fit: contain;
+                display: block;
+            }
+
+            /* Slightly smaller on narrow screens */
+            @media (max-width: 576px) {
+                .card-custom .me-3 img {
+                    width: 28px;
+                    height: 28px;
+                }
+            }
+        </style>
+        <style>
+            /* Slightly smaller section title for the advantages header */
+            .section-title > h1.display-6 {
+                font-size: 1.75rem; /* reduced from larger display size */
+                line-height: 1.15;
+                font-weight: 700;
+            }
+
+            /* Keep slightly larger on very wide screens, if desired */
+            @media (min-width: 992px) {
+                .section-title > h1.display-6 {
+                    font-size: 2rem;
+                }
+            }
+        </style>
 </head>
 
 <body>
@@ -105,7 +172,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-7 text-center">
                                     <!-- <p class="fs-4 text-white animated zoomIn">Welcome to <strong class="text-dark">Precision Weather Strip</strong></p> -->
-                                    <h1 class="display-1 text-dark mb-4 animated zoomIn">Precise Sealing Solution</h1>
+                                    <!--<h1 class="display-1 text-dark mb-4 animated zoomIn">Precise Sealing Solution</h1>-->
                                 </div>
                             </div>
                         </div>
@@ -118,7 +185,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-7 text-center">
                                     <!-- <p class="fs-4 text-white animated zoomIn">Welcome to <strong class="text-dark">Precision Weather Strip</strong></p> -->
-                                    <h1 class="display-1 text-dark mb-4 animated zoomIn">Precise Sealing Solution</h1>
+                                    <!--<h1 class="display-1 text-dark mb-4 animated zoomIn">Precise Sealing Solution</h1>-->
                                 </div>
                             </div>
                         </div>
@@ -131,7 +198,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-7 text-center">
                                     <!-- <p class="fs-4 text-white animated zoomIn">Welcome to <strong class="text-dark">Precision Weather Strip</strong></p> -->
-                                    <h1 class="display-1 text-dark mb-4 animated zoomIn">Precise Sealing Solution</h1>
+                                    <!--<h1 class="display-1 text-dark mb-4 animated zoomIn">Precise Sealing Solution</h1>-->
                                 </div>
                             </div>
                         </div>
@@ -154,7 +221,7 @@
     <!-- whatsappicon start -->
     <div class="icon-bar">
         <a href="https://api.whatsapp.com/send?phone=+918000077955&amp;text=Hello" target="_blank" class="whatsapp">
-            <img src="img/whatsapp/whatsapp.svg" style="width: 60px; height: 60px;">
+            <img src="img/whatsapp/whatsapp.svg" style="width: 40px; height: 40px;">
         </a>
     </div>
     <!-- whatsappicon End -->
@@ -205,6 +272,94 @@
     </div>
     <!-- About End -->
 
+    <!-- Services/Features Start -->
+    <div class="container-fluid py-5 advantages-bg">
+        <div class="container">
+            <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <p class="fs-5 fw-medium fst-italic text-primary">ULTIMATE EFFECTIVE PILE WEATHER STRIP</p>
+                <h1 class="display-6">ADVANTAGES OF PILE WEATHER STRIPS IN SLIDING WINDOW & DOOR SYSTEMS</h1>
+            </div>
+
+            <div class="row g-4 justify-content-center mt-4">
+                <div class="col-md-6 col-lg-5">
+                    <div class="bg-[#FFFFFF] rounded shadow-lg p-4 d-flex align-items-start card-custom">
+                        <div class="me-3">
+                            <img class="img-fluid bg-white w-20" src="img/high-performance.png" alt="">
+                        </div>
+                        <div>
+                            <h5 class="mb-1">
+                                HIGH PERFORMANCE SEALING
+                            </h5>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-5">
+                    <div class="bg-[#FFFFFF] rounded shadow-lg p-4 d-flex align-items-start card-custom">
+                        <div class="me-3">
+                            <img class="img-fluid bg-white w-20" src="img/high-voltage.png" alt="">
+                        </div>
+                        <div>
+                            <h5 class="mb-1">HIGH ENERGY EFFICIENY</h5>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4 justify-content-center mt-3">
+                <div class="col-md-6 col-lg-5">
+                    <div class="bg-[#FFFFFF] rounded shadow-lg p-4 d-flex align-items-start card-custom">
+                        <div class="me-3">
+                            <img class="img-fluid bg-white w-20" src="img/sliding-door.png" alt="">
+                        </div>
+                        <div>
+                            <h5 class="mb-1">EASE OF SLIDING </h5>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-5">
+                    <div class="bg-[#FFFFFF] rounded shadow-lg p-4 d-flex align-items-start card-custom">
+                        <div class="me-3">
+                            <img class="img-fluid bg-white w-20" src="img/resistence.png" alt="">
+                        </div>
+                        <div>
+                            <h5 class="mb-1">ABRASION RESISTANCE</h5>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-4 justify-content-center mt-4">
+                <div class="col-md-6 col-lg-5">
+                    <div class="bg-[#FFFFFF] rounded shadow-lg p-4 d-flex align-items-start card-custom">
+                        <div class="me-3">
+                            <img class="img-fluid bg-white w-20" src="img/loading.png" alt="">
+                        </div>
+                        <div>
+                            <h5 class="mb-1">
+                                RESILIENCE 
+                            </h5>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-5">
+                    <div class="bg-[#FFFFFF] rounded shadow-lg p-4 d-flex align-items-start card-custom">
+                        <div class="me-3">
+                            <img class="img-fluid bg-white w-20" src="img/drop.png" alt="">
+                        </div>
+                        <div>
+                            <h5 class="mb-1">WATER REPELENT</h5>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- Services/Features End -->
     <!-- Video Modal Start -->
     <div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
@@ -224,6 +379,14 @@
         </div>
     </div>
     <!-- Video Modal End -->
+
+
+    <!---Advantage-->
+
+
+
+
+
     <!-- Contact Start -->
     <div class="container-xxl contact py-5">
         <div class="container">
