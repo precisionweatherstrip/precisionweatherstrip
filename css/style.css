@@ -205,6 +205,21 @@
   background-size: cover;
 }
 
+/* Ensure page header has a consistent minimum height and its content is vertically centered */
+.page-header {
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+}
+
+/* Page-specific larger header utility
+   Use `page-header-lg` on pages that need a slightly larger header area. */
+.page-header-lg {
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+}
+
 .page-header .breadcrumb-item + .breadcrumb-item::before {
   color: var(--light);
 }
