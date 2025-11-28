@@ -6,6 +6,27 @@
   --dark: #252c30;
 }
 
+/* Global font: use Poppins for all text, form controls and headings */
+body,
+input,
+textarea,
+select,
+button {
+  font-family: "inter", sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "inter", sans-serif;
+  font-weight: 600;
+}
 .back-to-top {
   position: fixed;
   display: none;
@@ -15,7 +36,7 @@
 }
 
 .fw-medium {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .fw-bold {
