@@ -50,6 +50,10 @@ body.has-fixed-header {
     padding-left: 0.8rem;
     padding-right: 0.8rem;
   }
+  .navbar .d-flex.align-items-center {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
 }
 /********** Template CSS **********/
 :root {

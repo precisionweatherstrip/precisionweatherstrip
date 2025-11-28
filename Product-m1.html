@@ -53,6 +53,46 @@
         @media (max-width: 767px) {
             .hex-wrap, .sketch { margin: 12px auto; }
         }
+        /* Make product images smaller in small view */
+        @media (max-width: 576px) {
+            .hex img {
+                max-width: 140px;
+                max-height: 140px;
+            }
+            .sketch img {
+                max-width: 120px;
+                max-height: 120px;
+            }
+        }
+        /* Center card and content text in small view */
+        @media (max-width: 576px) {
+            .product-hero .card {
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+            }
+            .product-hero .col-lg-6.col-md-12 {
+                text-align: center;
+            }
+            .product-hero .col-lg-6.col-md-12 h2,
+            .product-hero .col-lg-6.col-md-12 p,
+            .product-hero .col-lg-6.col-md-12 h5,
+            .product-hero .col-lg-6.col-md-12 .product-note {
+                text-align: center;
+            }
+        }
+
+        /* Responsive table for small screens */
+        @media (max-width: 576px) {
+            .spec-table {
+                max-width: 320px;
+                width: 100%;
+                font-size: 0.95rem;
+            }
+            .table-responsive {
+                overflow-x: auto;
+            }
+        }
     </style>
 
 </head>
@@ -81,6 +121,7 @@
                 <div class="d-flex align-items-center ms-3">
                     <a href="quote.html" class="btn btn-primary rounded-pill px-4 py-2 btn-get-quote">Get Quote</a>
                 </div>
+                
             </div>
         </nav>
     </div>

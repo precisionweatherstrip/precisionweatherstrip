@@ -32,12 +32,13 @@
 
         /* Contact info box (uses textarea background color for subtle look) */
         .opening-box {
-            background: #f3f4f6; /* match input/textarea */
-            color: #888888; /* user-requested text color */
-            border-radius: 28px;
-            padding: 1.2rem 1.4rem;
-            max-width: 320px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+              background: #f3f4f6;
+              color: #888888; 
+              border-radius: 28px;
+              padding: 1.2rem 1.4rem;
+              max-width: 380px;
+              width: 320px;
+              box-shadow: 0 10px 25px rgba(0,0,0,0.06);
         }
         .opening-box h4 { margin: 0 0 0.4rem 0; font-weight:700; color: #888888; }
         .opening-box .small { opacity: .95; color: #888888; }
@@ -66,11 +67,20 @@
 
         /* Layout tweaks */
         @media (min-width: 768px) {
-            .contact-left { display:flex; flex-direction:column; justify-content:center; }
+              .contact-left { display:flex; flex-direction:column; justify-content:center; }
+              .opening-box {
+                 min-height: 200px;
+              }
         }
         @media (max-width: 767px) {
-            .circle-decor { display:none; }
-            .opening-box { max-width: 100%; }
+              .circle-decor { display:none; }
+              .opening-box { max-width: 100%; }
+              .opening-box,
+              .opening-box h4,
+              .opening-box .contact-text,
+              .opening-box .small {
+                 font-size: 0.92rem;
+              }
         }
         /* Contact list: make icon images small and align with text */
         .contact-list { margin-top: 0; }
@@ -82,9 +92,9 @@
             .contact-item .contact-text { font-size: 0.92rem; }
         }
         /* Nudge the location (pin) icon slightly upward so it aligns better with multi-line address */
-        .contact-item.location .icon img { transform: translateY(-30px); }
+           .contact-item.location .icon img { transform: translateY(-10px); }
         @media (max-width: 576px) {
-            .contact-item.location .icon img { transform: translateY(-30px); }
+              .contact-item.location .icon img { transform: translateY(-30px); }
         }
     </style>
 </head>
@@ -109,12 +119,13 @@
                     <div class="d-flex align-items-center ms-3">
                         <a href="quote.html" class="btn btn-primary rounded-pill px-4 py-2 btn-get-quote">Get Quote</a>
                     </div>
+                    
                 </div>
             </nav>
         </div>
     </div>
 
-    <div class="container py-4" style="margin-top: -20px;">
+    <div class="container py-5">
         <div class="row justify-content-center">
             <div class="col-lg-10">
                 <div class="card shadow-sm contact-card">
@@ -126,8 +137,8 @@
 
                                         <div class="opening-box mt-4">
                                             <div class="contact-list mt-4">
-                                            <div class="contact-item mb-2"><span class="icon"><img src="img/call.png" alt="Phone Icon"></span><div class="contact-text">+8801779717686</div></div>
-                                            <div class="contact-item mb-2"><span class="icon"><img src="img/mail.png" alt="Email Icon"></span><div class="contact-text">Support@uprangly.com</div></div>
+                                            <div class="contact-item mb-2"><span class="icon"><img src="img/call.png" alt="Phone Icon"></span><div class="contact-text">+91 8000077955</div></div>
+                                            <div class="contact-item mb-2"><span class="icon"><img src="img/mail.png" alt="Email Icon"></span><div class="contact-text">precision_weatherstrip@yahoo.com</div></div>
                                             <div class="contact-item mb-2 location"><span class="icon"><img src="img/pin.png" alt="Location Icon"></span><div class="contact-text"> Plot No. 1 To 8 , Type - A, Rs No. 51/1, Shreedhar Vardhan Industrial Park, Alura, Kamrej, Surat - 394310.</div></div>
                                         </div>
                                         </div>
@@ -140,20 +151,20 @@
                                 <form id="quoteForm" action="https://formspree.io/f/myzqnzqr" method="POST">
                                     <div class="row g-3">
                                         <div class="col-md-6">
-                                            <label class="label-small">Name</label>
-                                            <input type="text" name="name" class="form-control input-underline" placeholder="Your Name " required>
+                                            <label class="label-small"> First Name</label>
+                                            <input type="text" name="firstname" class="form-control input-underline" placeholder="Your first Name " required>
                                         </div>
                                         <div class="col-md-6">
-                                            <label class="label-small">LastName</label>
-                                            <input type="text" name="lastname" class="form-control input-underline" placeholder="Your LastName " required>
+                                            <label class="label-small">Last Name</label>
+                                            <input type="text" name="lastname" class="form-control input-underline" placeholder="Enter your last name " required>
                                         </div>
                                         <div class="col-md-6">
                                             <label class="label-small">Email</label>
-                                            <input type="email" name="email" class="form-control input-underline" placeholder="Your Email" required>
+                                            <input type="email" name="email" class="form-control input-underline" placeholder="Enter your email" required>
                                         </div>
                                         <div class="col-md-6">
                                             <label class="label-small">Phone</label>
-                                            <input type="tel" name="phone" class="form-control input-underline" placeholder="Your Phone No." required>
+                                            <input type="tel" name="phone" class="form-control input-underline" placeholder="Enter your phone number" required>
                                         </div>
 
                                         <div class="col-md-6">
