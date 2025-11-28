@@ -38,7 +38,7 @@
     </style>
 </head>
 
-<body>
+<body class="has-fixed-header">
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="loader-container">
@@ -49,7 +49,7 @@
 
     
     <!-- Navbar Start -->
-    <div class="container-fluid bg-white sticky-top">
+    <div class="container-fluid bg-white fixed-top">
         <div class="container">
             <nav class="navbar navbar-expand-lg bg-white navbar-light py-2 py-lg-0">
               <!-- <a href="index.html" class="navbar-brand"> -->
@@ -77,7 +77,9 @@
                         </div> -->
                         <a href="contact.html" class="nav-item nav-link active">Contact</a>
                     </div>
-                    
+                    <div class="d-flex align-items-center ms-3">
+                        <a href="quote.html" class="btn btn-primary rounded-pill px-4 py-2 btn-get-quote">Get Quote</a>
+                    </div>
                 </div>
             </nav>
         </div>
@@ -139,7 +141,8 @@
             <div class="row g-5">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                     <h3 class="mb-4">Contact</h3>
-                    <form>
+                    <form action="https://formspree.io/f/myzqnzqr"
+  method="POST">
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
@@ -166,7 +169,7 @@
                                 </div>
                             </div>
                             <div class="col-12">
-                                <button class="btn btn-primary rounded-pill py-3 px-5" type="submit">Send Message</button>
+                                <button class="btn btn-primary rounded-pill py-3 px-5 btn-get-quote" type="submit">Send Message</button>
                             </div>
                         </div>
                     </form>

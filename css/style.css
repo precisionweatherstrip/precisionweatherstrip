@@ -1,3 +1,56 @@
+/* Template Stylesheet */
+/* existing styles... */
+
+/* Get Quote button sizing */
+.btn-get-quote {
+  padding-left: 1.8rem;
+  padding-right: 1.8rem;
+  min-width: 150px;
+  background-color: #888888;
+}
+
+/* Product note styling: combine size, weight, spacing and style */
+.product-note {
+  font-weight: 700;
+  margin-top: 1.5rem; /* move it slightly further down than .mt-3 */
+  font-size: 1.0625rem; /* ~17px for better readability */
+  font-style: italic;
+  color: inherit;
+}
+
+@media (max-width: 576px) {
+  .btn-get-quote {
+    min-width: 110px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Fixed header spacing */
+body.has-fixed-header {
+  padding-top: 90px; /* adjust if navbar is taller */
+}
+
+@media (max-width: 576px) {
+  body.has-fixed-header {
+    padding-top: 110px;
+  }
+}
+
+/* Wider action buttons used on forms (e.g., quote form) */
+.btn-action-wide {
+  min-width: 140px;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+}
+
+@media (max-width: 576px) {
+  .btn-action-wide {
+    min-width: 100px;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+  }
+}
 /********** Template CSS **********/
 :root {
   --primary: #a1a1a1;
@@ -120,15 +173,16 @@ h6 {
 .navbar .navbar-nav .nav-link {
   margin-right: 35px;
   padding: 25px 0;
-  color: var(--dark);
+  color: #a1a1a1;
   font-weight: 600;
   text-transform: uppercase;
   outline: none;
+  transition: color 0.2s ease;
 }
 
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link.active {
-  color: var(--primary);
+  color: #000;
 }
 
 .navbar .dropdown-toggle::after {
@@ -352,7 +406,18 @@ h6 {
   word-break: break-word;
 }
 
-/*Description end*/
+/* Modal slide-from-top for quote */
+.modal.modal-top .modal-dialog {
+  transform: translateY(-30%);
+  transition: transform 0.35s ease-out;
+}
+.modal.modal-top.show .modal-dialog {
+  transform: translateY(0);
+}
+.modal-top .modal-content {
+  border-radius: 12px;
+  overflow: hidden;
+}
 
 /*** About ***/
 .video {
@@ -580,20 +645,6 @@ h6 {
   text-decoration: none;
   color: #333; /* Change this to your desired text color */
   font-weight: bold;
-  font-size: 10px; /* Adjust the font size as needed */
-  display: flex;
-  align-items: center;
-}
-
-/* Style for the logo */
-
-/* logo */
-
-/* Style for the navbar */
-.navbar-brand {
-  text-decoration: none;
-  color: #333; /* Change this to your desired text color */
-  font-weight: bold;
   font-size: 24px; /* Adjust the font size as needed */
   display: flex;
   align-items: center;
@@ -752,4 +803,96 @@ html {
   width: 48px; /* ensure consistent icon sizing */
   height: 48px;
   object-fit: contain;
+}
+
+/* Contact card (quote page) styles */
+.contact-card {
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.contact-left {
+  background: #888888;
+  color: #ffffff;
+  min-height: 100%;
+}
+.contact-left h3 {
+  color: #fff;
+  font-weight: 700;
+}
+.text-white-90 {
+  color: rgba(255, 255, 255, 0.95);
+}
+.contact-list {
+  margin-top: 1rem;
+}
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 14px 0;
+  font-weight: 600;
+}
+.contact-item .icon {
+  font-size: 20px;
+  line-height: 1;
+}
+.contact-text {
+  line-height: 1.2;
+}
+.circle-decor {
+  position: absolute;
+  right: -60px;
+  bottom: -40px;
+  width: 180px;
+  height: 180px;
+  border-radius: 100%;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.contact-form {
+  background: #ffffff;
+}
+.label-small {
+  display: block;
+  margin-bottom: 6px;
+  color: #666;
+  font-weight: 600;
+}
+.text-teal {
+  color: #666;
+}
+
+.input-underline {
+  border: none !important;
+  border-bottom: 2px solid #e6e6e6 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  padding: 10px 6px !important;
+}
+.input-underline:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border-bottom-color: #888888 !important;
+}
+
+.btn-send {
+  background: #888888;
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 8px;
+  box-shadow: 0 10px 24px rgba(7, 184, 170, 0.16);
+}
+
+@media (max-width: 767.98px) {
+  .contact-card {
+    display: block;
+  }
+  .contact-left {
+    border-radius: 12px 12px 0 0;
+  }
+  .contact-form {
+    border-radius: 0 0 12px 12px;
+  }
 }

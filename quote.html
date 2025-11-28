@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Get Quote - Precision Weather Strip</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+    
+        body { 
+            background: linear-gradient(to bottom, rgba(136, 180, 78, 0.1) 0%, rgba(136, 180, 78, 0.1) 60%, rgba(136, 180, 78, 0) 50%, rgba(136, 180, 78, 0) 100%), url('img/product-bg.png') left bottom no-repeat;
+            background-size: auto;
+        }
+
+        /* Card wrapper */
+        .contact-card { border-radius: 24px; overflow: hidden; border: none; }
+
+        /* Left column (heading + opening times) */
+        .contact-left { background: transparent; color: #111; }
+        .contact-left .p-4 { padding: 3rem; }
+        .contact-left h1 {
+            font-size: clamp(28px, 4.8vw, 48px);
+            font-weight: 700;
+            margin: 0 0 0.75rem 0;
+            line-height: 1.05;
+        }
+        .contact-left p.lead { color: rgba(0,0,0,0.7); margin-bottom: 1.6rem; }
+
+        /* Contact info box (uses textarea background color for subtle look) */
+        .opening-box {
+            background: #f3f4f6; /* match input/textarea */
+            color: #888888; /* user-requested text color */
+            border-radius: 28px;
+            padding: 1.2rem 1.4rem;
+            max-width: 320px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+        }
+        .opening-box h4 { margin: 0 0 0.4rem 0; font-weight:700; color: #888888; }
+        .opening-box .small { opacity: .95; color: #888888; }
+        .opening-box .contact-text { color: #888888; }
+
+        /* Decorative circle (optional) */
+        .circle-decor { position: absolute; right: -60px; top: 40px; width: 120px; height: 120px; background: rgba(0,0,0,0.03); border-radius: 50%; }
+
+        /* Right column: rounded white form */
+        .contact-form { background: transparent; padding: 2rem; }
+        .contact-form .p-4 { padding: 2.2rem; }
+        .contact-form .card-inner { background: #fff; border-radius: 28px; padding: 2rem; box-shadow: 0 8px 30px rgba(0,0,0,0.06); }
+
+        /* Input styles to match the mockup */
+        .input-underline { border-radius: 12px; background: #f3f4f6; border: none; padding: 14px 16px; }
+        .input-underline:focus { outline: none; box-shadow: 0 0 0 3px rgba(9,71,209,0.08); }
+
+        /* Submit button */
+        .btn-send { background: #888888; color: #fff; border-radius: 999px; padding: 10px 28px; border: none; }
+
+        /* Quantity control */
+        .qty-control { display: inline-flex; align-items: center; border: 1px solid #e6e6e6; border-radius: 6px; overflow: hidden; }
+        .qty-btn { background: transparent; border: none; padding: 8px 12px; cursor: pointer; font-size: 18px; line-height: 1; }
+        .qty-input { width: 72px; text-align: center; border: none; padding: 8px 6px; font-size: 16px; }
+        .qty-input:focus { outline: none; }
+
+        /* Layout tweaks */
+        @media (min-width: 768px) {
+            .contact-left { display:flex; flex-direction:column; justify-content:center; }
+        }
+        @media (max-width: 767px) {
+            .circle-decor { display:none; }
+            .opening-box { max-width: 100%; }
+        }
+        /* Contact list: make icon images small and align with text */
+        .contact-list { margin-top: 0; }
+        .contact-item { display: flex; align-items: center; gap: 0.6rem; }
+        .contact-item .icon img { width: 20px; height: 20px; object-fit: contain; display: block; }
+        .contact-item .contact-text { font-size: 0.95rem; line-height: 1.2; }
+        @media (max-width: 576px) {
+            .contact-item .icon img { width: 18px; height: 18px; }
+            .contact-item .contact-text { font-size: 0.92rem; }
+        }
+        /* Nudge the location (pin) icon slightly upward so it aligns better with multi-line address */
+        .contact-item.location .icon img { transform: translateY(-30px); }
+        @media (max-width: 576px) {
+            .contact-item.location .icon img { transform: translateY(-30px); }
+        }
+    </style>
+</head>
+
+<body class="has-fixed-header">
+    <div class="container-fluid bg-white fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light py-2 py-lg-0">
+                <a href="index.html" class="m-0">
+                    <img id="logo" src="img/logo.png" alt="logo">
+                </a>
+                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="product.html" class="nav-item nav-link">Products</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <div class="d-flex align-items-center ms-3">
+                        <a href="quote.html" class="btn btn-primary rounded-pill px-4 py-2 btn-get-quote">Get Quote</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container py-4" style="margin-top: -20px;">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="card shadow-sm contact-card">
+                    <div class="row g-0 align-items-stretch">
+                                <div class="col-md-4 contact-left position-relative">
+                                    <div class="p-4 p-md-5">
+                                        <h1>Request a quote</h1>
+                                        <p class="lead">Fillout our form and we will reply shortly.</p>
+
+                                        <div class="opening-box mt-4">
+                                            <div class="contact-list mt-4">
+                                            <div class="contact-item mb-2"><span class="icon"><img src="img/call.png" alt="Phone Icon"></span><div class="contact-text">+8801779717686</div></div>
+                                            <div class="contact-item mb-2"><span class="icon"><img src="img/mail.png" alt="Email Icon"></span><div class="contact-text">Support@uprangly.com</div></div>
+                                            <div class="contact-item mb-2 location"><span class="icon"><img src="img/pin.png" alt="Location Icon"></span><div class="contact-text"> Plot No. 1 To 8 , Type - A, Rs No. 51/1, Shreedhar Vardhan Industrial Park, Alura, Kamrej, Surat - 394310.</div></div>
+                                        </div>
+                                        </div>
+
+                                    </div>
+                                    
+                                </div>
+                        <div class="col-md-8 contact-form">
+                            <div class="p-4 p-md-5 card-inner">
+                                <form id="quoteForm" action="https://formspree.io/f/myzqnzqr" method="POST">
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <label class="label-small">Name</label>
+                                            <input type="text" name="name" class="form-control input-underline" placeholder="Your Name " required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="label-small">LastName</label>
+                                            <input type="text" name="lastname" class="form-control input-underline" placeholder="Your LastName " required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="label-small">Email</label>
+                                            <input type="email" name="email" class="form-control input-underline" placeholder="Your Email" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="label-small">Phone</label>
+                                            <input type="tel" name="phone" class="form-control input-underline" placeholder="Your Phone No." required>
+                                        </div>
+
+                                        <div class="col-md-6">
+                                            <label class="label-small">Quantity</label>
+                                            <div class="qty-control">
+                                                <button type="button" class="qty-btn" data-action="decrease">−</button>
+                                                <input type="number" name="quantity" class="qty-input" value="0" min="0" aria-label="Quantity">
+                                                <button type="button" class="qty-btn" data-action="increase">+</button>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <label class="label-small text-teal">Description</label>
+                                            <textarea name="message" class="form-control input-underline" rows="4" placeholder=" "></textarea>
+                                        </div>
+                                        <div class="col-12">
+                                            <button type="submit" class="btn btn-send">Submit</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Simple client-side submit handler (placeholder)
+        // Quantity stepper controls
+        document.querySelectorAll('.qty-btn').forEach(function(btn){
+            btn.addEventListener('click', function(){
+                var action = this.getAttribute('data-action');
+                var container = this.closest('.qty-control');
+                var input = container.querySelector('.qty-input');
+                var val = parseInt(input.value || '0', 10);
+                if (action === 'increase') input.value = val + 1;
+                if (action === 'decrease') input.value = Math.max(0, val - 1);
+            });
+        });
+
+        document.getElementById('quoteForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Thank you — your quote request has been submitted.');
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+
+</html>
