@@ -161,10 +161,19 @@
                                         <div class="col-md-6">
                                             <label class="label-small">Email</label>
                                             <input type="email" name="email" class="form-control input-underline" placeholder="Enter your email" required>
+                                            <div id="email-error" style="color: #d32f2f; font-size: 0.98rem; margin-top: 4px; min-height: 20px; display: none;"></div>
                                         </div>
                                         <div class="col-md-6">
                                             <label class="label-small">Phone</label>
-                                            <input type="tel" name="phone" class="form-control input-underline" placeholder="Enter your phone number" required>
+                                            <input type="tel" 
+       name="phone" 
+       class="form-control input-underline" 
+       placeholder="Enter your phone number" 
+       required
+       pattern="[0-9]{10}"
+       maxlength="10">
+                                            <div id="phone-error" style="color: #d32f2f; font-size: 0.98rem; margin-top: 4px; min-height: 20px; display: none;"></div>
+
                                         </div>
 
                                         <div class="col-md-6">
@@ -233,6 +242,77 @@ document.getElementById("quoteForm").addEventListener("submit", async function(e
         alert("Oops! Something went wrong.");
     }
 });
+
+
+// Email validation
+var emailInput = document.querySelector("input[name='email']");
+var emailError = document.getElementById("email-error");
+function showEmailError(msg) {
+    emailError.textContent = msg;
+    emailError.style.display = 'block';
+    emailError.style.opacity = '1';
+}
+function hideEmailError() {
+    emailError.textContent = '';
+    emailError.style.display = 'none';
+    emailError.style.opacity = '0';
+}
+emailInput.addEventListener('input', function() {
+    var email = emailInput.value.trim();
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (email.length > 0 && !emailRegex.test(email)) {
+        showEmailError('Please enter a valid email address.');
+    } else {
+        hideEmailError();
+    }
+});
+
+// Phone number validation
+var phoneInput = document.querySelector("input[name='phone']");
+var phoneError = document.getElementById("phone-error");
+function showPhoneError(msg) {
+    phoneError.textContent = msg;
+    phoneError.style.display = 'block';
+    phoneError.style.opacity = '1';
+}
+function hidePhoneError() {
+    phoneError.textContent = '';
+    phoneError.style.display = 'none';
+    phoneError.style.opacity = '0';
+}
+phoneInput.addEventListener('input', function() {
+    var phone = phoneInput.value.trim();
+    var phoneRegex = /^[0-9]{10}$/;
+    if (phone.length > 0 && !phoneRegex.test(phone)) {
+        showPhoneError('Please enter a valid 10-digit phone number.');
+    } else {
+        hidePhoneError();
+    }
+});
+document.getElementById("quoteForm").addEventListener("submit", function (e) {
+    var email = emailInput.value.trim();
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        e.preventDefault();
+        showEmailError('Please enter a valid email address.');
+        emailInput.focus();
+        return false;
+    } else {
+        hideEmailError();
+    }
+    var phone = phoneInput.value.trim();
+    var phoneRegex = /^[0-9]{10}$/;
+    if (!phoneRegex.test(phone)) {
+        e.preventDefault(); // stop form submit
+        showPhoneError('Please enter a valid 10-digit phone number.');
+        phoneInput.focus();
+        return false;
+    } else {
+        hidePhoneError();
+    }
+});
+
+
 </script>
 
 </body>
