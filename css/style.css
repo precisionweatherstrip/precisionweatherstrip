@@ -550,6 +550,8 @@ h6 {
   border-radius: 50px;
 }
 
+
+
 /*** Testimonial ***/
 .testimonial {
   background: linear-gradient(
@@ -805,6 +807,8 @@ html {
   object-fit: contain;
 }
 
+
+
 /* Contact card (quote page) styles */
 .contact-card {
   border-radius: 14px;
@@ -896,3 +900,14 @@ html {
     border-radius: 0 0 12px 12px;
   }
 }
+
+
+/*table border*/
+.product-table-black {
+            border: 2px solid #000 !important;
+        }
+        .product-table-black th,
+        .product-table-black td,br {
+            border: 2px solid #000 !important;
+            color: #000 !important;
+        }

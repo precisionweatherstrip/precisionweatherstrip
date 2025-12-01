@@ -152,9 +152,11 @@
                                             <input type="email" name="email" class="form-control input-underline" placeholder="Your Email" required>
                                         </div>
                                         <div class="col-md-6">
-                                            <label class="label-small">Phone</label>
-                                            <input type="tel" name="phone" class="form-control input-underline" placeholder="Your Phone No." required>
-                                        </div>
+    <label class="label-small">Phone</label>
+    <input type="tel" id="phone" name="phone" class="form-control input-underline" placeholder="Your Phone No." required>
+    <small id="phoneError" style="color:red; display:none;">Enter valid 10-digit number</small>
+</div>
+
 
                                         <div class="col-md-6">
                                             <label class="label-small">Quantity</label>
@@ -222,6 +224,33 @@ document.getElementById("quoteForm").addEventListener("submit", async function(e
         alert("Oops! Something went wrong.");
     }
 });
+
+// PHONE VALIDATION
+const phoneInput = document.getElementById("phone");
+const phoneError = document.getElementById("phoneError");
+
+phoneInput.addEventListener("input", function () {
+
+    // Remove non-digit characters
+    this.value = this.value.replace(/\D/g, "");
+
+    // Show error if not 10 digits
+    if (this.value.length !== 10) {
+        phoneError.style.display = "block";
+    } else {
+        phoneError.style.display = "none";
+    }
+});
+
+// Prevent form submit if phone invalid
+document.getElementById("quoteForm").addEventListener("submit", function (e) {
+    if (phoneInput.value.length !== 10) {
+        e.preventDefault();
+        phoneError.style.display = "block";
+        phoneInput.focus();
+    }
+});
+
 </script>
 
 </body>
