@@ -28,55 +28,18 @@
     <link href="css/style.css" rel="stylesheet">
 
     <style>
-        /* Layout Fix */
-        .product-hero { padding: 40px 0; }
-        .product-hero h2 { font-family: 'Poppins', sans-serif; font-weight: 600; }
-
-        /* Hex Image */
-        .hex-wrap { width: 230px; margin-left: auto; margin-right: auto; }
-        .hex {
-            width: 250px;
-            height: 250px;
-            overflow: hidden;
-            clip-path: polygon(25% 6.7%, 75% 6.7%, 100% 50%, 75% 93.3%, 25% 93.3%, 0% 50%);
+        /* Only keeping used CSS */
+        .table-compact th, .table-compact td {
+            padding: 0.25rem !important;
+            font-size: 1rem;
+            min-width: 60px;
         }
-        .hex img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .table-compact th {
+            font-size: 1rem;
         }
-
-        /* Sketch */
-        .sketch { width: 220px; margin: 18px auto; }
-
-        @media (max-width: 767px) {
-            .hex-wrap { width: 140px; }
-            .hex { width: 150px; height: 150px; }
-            .sketch { width: 120px; }
-
-            .spec-table, .spec-table th, .spec-table td {
-                font-size: 13px;
-                padding: 4px 6px;
-                border-width: 1px;
-            }
-            .spec-table th, .spec-table td {
-                min-width: 60px;
-            }
-        }
-
-        @media (max-width: 576px) {
-            .table-compact th, .table-compact td {
-                padding: 0.25rem !important;
-                font-size: 0.85rem;
-                min-width: 60px;
-            }
-            .table-compact th {
-                font-size: 0.8rem;
-            }
-            .table-compact {
-                width: 100% !important;
-                max-width: 100% !important;
-            }
+        .table-compact {
+            width: 100% !important;
+            max-width: 100% !important;
         }
     </style>
 
@@ -142,9 +105,9 @@
           <thead class="table-light">
             <tr>
               <th style="border: 2px solid #000; background-color: beige;">BASE WIDTH<br>[mm]</th>
-              <th style="border: 2px solid #000;">BRUSH HEIGHT<br>[mm]</th>
-              <th style="border: 2px solid #000;">PILE FORMATION</th>
-              <th style="border: 2px solid #000;">PACKING</th>
+              <th style="border: 2px solid #000;background-color: beige;">BRUSH HEIGHT<br>[mm]</th>
+              <th style="border: 2px solid #000;background-color: beige;">PILE FORMATION</th>
+              <th style="border: 2px solid #000;background-color: beige;">PACKING</th>
             </tr>
           </thead>
 
@@ -182,7 +145,7 @@
     <!-- Right Side -->
     <div class="col-lg-6 col-12 d-flex flex-column align-items-center">
       <img src="img/1.webp" alt="Non Siliconised Pile Weather Strip" class="img-fluid mb-4" style="max-width: 200px;">
-      <img src="img/11.webp" alt="Pile Weather Strip Diagram" class="img-fluid" style="max-width: 220px;">
+      <img src="DIAGRAM/Non-siliconised-pile-weather-strip-[NS].png" alt="Pile Weather Strip Diagram" class="img-fluid" style="max-width: 240px;">
     </div>
   </div>
 </div>
