@@ -13,7 +13,7 @@
 .product-note {
   font-weight: 700;
   margin-top: 1.5rem; /* move it slightly further down than .mt-3 */
-  font-size: 1.0625rem; /* ~17px for better readability */
+  font-size: 1.0625rem; 
   font-style: italic;
   color: inherit;
 }
@@ -63,13 +63,13 @@ body.has-fixed-header {
   --dark: #252c30;
 }
 
-/* Global font: use Poppins for all text, form controls and headings */
+
 body,
 input,
 textarea,
 select,
 button {
-  font-family: "inter", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -81,7 +81,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "inter", sans-serif;
+  font-family: "Po", sans-serif;
   font-weight: 600;
 }
 .back-to-top {
@@ -554,6 +554,8 @@ h6 {
   border-radius: 50px;
 }
 
+
+
 /*** Testimonial ***/
 .testimonial {
   background: linear-gradient(
@@ -643,6 +645,7 @@ h6 {
 .copyright a:hover {
   color: #ffffff !important;
 }
+
 
 /* Style for the navbar */
 .navbar-brand {
@@ -809,6 +812,8 @@ html {
   object-fit: contain;
 }
 
+
+
 /* Contact card (quote page) styles */
 .contact-card {
   border-radius: 14px;
@@ -900,3 +905,14 @@ html {
     border-radius: 0 0 12px 12px;
   }
 }
+
+
+/*table border*/
+.product-table-black {
+            border: 2px solid #000 !important;
+        }
+        .product-table-black th,
+        .product-table-black td,br {
+            border: 2px solid #000 !important;
+            color: #000 !important;
+        }

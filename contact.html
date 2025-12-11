@@ -38,11 +38,6 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet" />
     <style>
-      /* Use Poppins for the page header h1 */
-      .page-header h1 {
-        font-family: "Poppins", sans-serif;
-        font-weight: 600;
-      }
       /* Responsive Contact Section for Small View */
       @media (max-width: 576px) {
         .container-xxl.contact {
@@ -50,13 +45,6 @@
         }
         .section-title h1.display-6 {
           font-size: 1.3rem !important;
-        }
-        .row.g-5 {
-          flex-direction: column !important;
-        }
-        .col-lg-6, .col-md-4 {
-          max-width: 100% !important;
-          flex: 0 0 100% !important;
         }
         .form-floating > .form-control,
         .form-floating > textarea {
@@ -152,7 +140,7 @@
       data-wow-delay="0.1s"
     >
       <div class="container text-center py-5">
-        <h1 class="display-2 text-dark mb-4 animated slideInDown">
+        <h1 class="display-2 text-dark mb-4 animated slideInDown"style="font-family: Poppins;">
           Contact Us
         </h1>
         <nav aria-label="breadcrumb animated slideInDown">
@@ -189,7 +177,7 @@
           data-wow-delay="0.1s"
           style="max-width: 500px"
         >
-          <p class="fs-5 fw-medium fst-italic text-primary">Contact Us</p>
+          <p class="text-primary" style="font-weight: 600; font-size: 24px;">Contact Us</p>
           <h1 class="display-6">If You Have Any Query, Please Contact Us</h1>
         </div>
         <div class="row g-5 mb-5">

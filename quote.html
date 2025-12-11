@@ -164,17 +164,11 @@
                                             <div id="email-error" style="color: #d32f2f; font-size: 0.98rem; margin-top: 4px; min-height: 20px; display: none;"></div>
                                         </div>
                                         <div class="col-md-6">
-                                            <label class="label-small">Phone</label>
-                                            <input type="tel" 
-       name="phone" 
-       class="form-control input-underline" 
-       placeholder="Enter your phone number" 
-       required
-       pattern="[0-9]{10}"
-       maxlength="10">
-                                            <div id="phone-error" style="color: #d32f2f; font-size: 0.98rem; margin-top: 4px; min-height: 20px; display: none;"></div>
+    <label class="label-small">Phone</label>
+    <input type="tel" id="phone" name="phone" class="form-control input-underline" placeholder="Your Phone No." required>
+    <small id="phoneError" style="color:red; display:none;">Enter valid 10-digit number</small>
+</div>
 
-                                        </div>
 
                                         <div class="col-md-6">
                                             <label class="label-small">Quantity</label>
@@ -243,75 +237,31 @@ document.getElementById("quoteForm").addEventListener("submit", async function(e
     }
 });
 
+// PHONE VALIDATION
+const phoneInput = document.getElementById("phone");
+const phoneError = document.getElementById("phoneError");
 
-// Email validation
-var emailInput = document.querySelector("input[name='email']");
-var emailError = document.getElementById("email-error");
-function showEmailError(msg) {
-    emailError.textContent = msg;
-    emailError.style.display = 'block';
-    emailError.style.opacity = '1';
-}
-function hideEmailError() {
-    emailError.textContent = '';
-    emailError.style.display = 'none';
-    emailError.style.opacity = '0';
-}
-emailInput.addEventListener('input', function() {
-    var email = emailInput.value.trim();
-    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (email.length > 0 && !emailRegex.test(email)) {
-        showEmailError('Please enter a valid email address.');
+phoneInput.addEventListener("input", function () {
+
+    // Remove non-digit characters
+    this.value = this.value.replace(/\D/g, "");
+
+    // Show error if not 10 digits
+    if (this.value.length !== 10) {
+        phoneError.style.display = "block";
     } else {
-        hideEmailError();
+        phoneError.style.display = "none";
     }
 });
 
-// Phone number validation
-var phoneInput = document.querySelector("input[name='phone']");
-var phoneError = document.getElementById("phone-error");
-function showPhoneError(msg) {
-    phoneError.textContent = msg;
-    phoneError.style.display = 'block';
-    phoneError.style.opacity = '1';
-}
-function hidePhoneError() {
-    phoneError.textContent = '';
-    phoneError.style.display = 'none';
-    phoneError.style.opacity = '0';
-}
-phoneInput.addEventListener('input', function() {
-    var phone = phoneInput.value.trim();
-    var phoneRegex = /^[0-9]{10}$/;
-    if (phone.length > 0 && !phoneRegex.test(phone)) {
-        showPhoneError('Please enter a valid 10-digit phone number.');
-    } else {
-        hidePhoneError();
-    }
-});
+// Prevent form submit if phone invalid
 document.getElementById("quoteForm").addEventListener("submit", function (e) {
-    var email = emailInput.value.trim();
-    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
+    if (phoneInput.value.length !== 10) {
         e.preventDefault();
-        showEmailError('Please enter a valid email address.');
-        emailInput.focus();
-        return false;
-    } else {
-        hideEmailError();
-    }
-    var phone = phoneInput.value.trim();
-    var phoneRegex = /^[0-9]{10}$/;
-    if (!phoneRegex.test(phone)) {
-        e.preventDefault(); // stop form submit
-        showPhoneError('Please enter a valid 10-digit phone number.');
+        phoneError.style.display = "block";
         phoneInput.focus();
-        return false;
-    } else {
-        hidePhoneError();
     }
 });
-
 
 </script>
 

@@ -34,30 +34,31 @@
 
     <!-- Quick fixes: remove white overlay on images and hide page spinner -->
     <style>
-      /* Hide the full-page spinner that covers images */
-      #spinner { display: none !important; }
+            /* Hide the full-page spinner that covers images */
+            #spinner { display: none !important; }
 
-      /* Ensure carousel items are positioned for pseudo elements */
-      #header-carousel .carousel-item { position: relative; }
+            /* Ensure carousel items are positioned for pseudo elements */
+            #header-carousel .carousel-item { position: relative; }
 
-      /* Add a white translucent overlay only to the first carousel item */
-      #header-carousel .carousel-item:first-child::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: rgba(255,255,255,0.65); /* change .65 to desired opacity */
-        z-index: 1;
-      }
+            /* Add a white translucent overlay only to the first carousel item */
+            #header-carousel .carousel-item:first-child::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: rgba(255,255,255,0.65); /* change .65 to desired opacity */
+                z-index: 1;
+            }
 
-      /* Keep carousel captions above the overlay */
-      #header-carousel .carousel-caption,
-      #header-carousel .carousel-caption .container { 
-        background: transparent !important;
-        z-index: 2;
-      }
 
-      /* Ensure images are fully opaque */
-      #header-carousel .carousel-item img { opacity: 1 !important; filter: none !important; }
+            /* Keep carousel captions above the overlay */
+            #header-carousel .carousel-caption,
+            #header-carousel .carousel-caption .container { 
+                background: transparent !important;
+                z-index: 2;
+            }
+
+            /* Ensure images are fully opaque */
+            #header-carousel .carousel-item img { opacity: 1 !important; filter: none !important; }
 
             /* Use Poppins for the homepage header caption */
             #header-carousel .carousel-caption h1 {
@@ -95,6 +96,13 @@
                 .section-title > h1.display-6 {
                     font-size: 2rem;
                 }
+            }
+        </style>
+        <style>
+            /* Shift up the third carousel image for better visibility */
+            .img-shift-up {
+                position: relative;
+                top: -80px; 
             }
         </style>
 </head>
@@ -181,7 +189,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100" src="img/Product/p3.png" alt="Image">
+                    <img class="w-100 img-shift-up" src="img/Product/p3.png" alt="Image">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-center">
@@ -227,34 +235,27 @@
         </a>
     </div>
     <!-- whatsappicon End -->
-
+    
     <!-- About Start -->
     <div class="container-xxl py-5">
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-6">
                     <div class="row g-3">
-                        <div class="col-6 text-end">
-                            <img class="img-fluid bg-white w-100 mb-3 wow fadeIn" data-wow-delay="0.1s" src="img/Product/p4.png" alt="">
-
-                           <!----> <img class="img-fluid bg-white w-100 wow fadeIn" data-wow-delay="0.2s" src="img/Product/p9.png" alt="">
-                        </div>
-                        
-                        <div class="col-6">
-                            <img class="img-fluid bg-white w-50 mb-3 wow fadeIn" data-wow-delay="0.3s" src="img/Product/p6.png" alt="">
-
-                            <img class="img-fluid bg-white w-100 wow fadeIn" data-wow-delay="0.4s" src="img/Product/p3.png" alt="">
+                        <div class="col-12 text-center">
+                            <img class="img-fluid bg-white w-75 mb-4 wow fadeIn" data-wow-delay="0.1s" src="Pile-and-section-images/1.png" alt="" style="max-width:400px;width:100%;">
+                            <img class="img-fluid bg-white w-75 mb-4 wow fadeIn" data-wow-delay="0.2s" src="Pile-and-section-images/2.png" alt="" style="max-width:400px;width:100%;">
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
                     <div class="section-title">
-                        <p class="fs-5 fw-medium fst-italic text-primary">About Us</p>
-                        <h1 class="display-6">The success history of Precision<br/> Weather Strip in 10 years</h1>
+                        <p class="text-primary" style="font-weight: 600;font-size: 24px;">About Us</p>
+                        <h1 class="display-6">The success history of Precision<br/> Weather Strip in 13 years</h1>
                     </div>
                     <div class="row g-3 mb-4">
                         <div class="col-sm-4">
-                            <img class="img-fluid bg-white w-100" src="img/Product/p2.png" alt="">
+                            <img class="img-fluid bg-white w-100" src="Pile-and-section-images/3.png" alt="">
                         </div>
                         <div class="col-sm-8">
                             <h5>A Decade of Excellence in Weatherproofing Solutions</h5>
@@ -263,14 +264,13 @@
                     </div>
                     <div class="border-top mb-4"></div>
                     <div class="row g-3">
-                        <div class="col-sm-4">
-                            <img class="img-fluid bg-white w-100" src="img/Product/p3.png" alt="">
-                        </div>
-                        <div class="col-sm-8">
+                        <div class="col-sm-8 order-sm-1 order-lg-1">
                             <h5>A Legacy of Protection in Weather Stripping</h5>
                             <p class="mb-0">Delivering Unmatched Sealing Solutions for Over a Decade.</p>
                         </div>
-                        
+                        <div class="col-sm-4 order-sm-2 order-lg-2">
+                            <img class="img-fluid bg-white w-100" src="Pile-and-section-images/4.png" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -282,13 +282,13 @@
     <div class="container-fluid py-5 advantages-bg">
         <div class="container">
             <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <p class="fs-5 fw-medium fst-italic text-primary">ULTIMATE EFFECTIVE PILE WEATHER STRIP</p>
-                <h1 class="display-6">ADVANTAGES OF PILE WEATHER STRIPS IN SLIDING WINDOW & DOOR SYSTEMS</h1>
+                <p class="text-primary"style="font-weight: 600;font-size: 24px;"> Ultimate Effective Pile Weather Strip</p>
+                <h1 class="display-6">Advantages of pile weather strips in sliding window & door systems</h1>
             </div>
 
             <div class="row g-4 justify-content-center mt-4">
                 <div class="col-md-6 col-lg-5">
-                    <div class="bg-[#FFFFFF] rounded shadow-lg p-4 d-flex align-items-start card-custom">
+                    <div class="bg-[#FFFFFF] rounded shadow-lg p-4 d-flex align-items-start card-custom wow fadeInUp" data-wow-delay="0.1s">
                         <div class="me-3">
                             <img class="img-fluid bg-white w-20" src="img/high-performance.png" alt="">
                         </div>
@@ -296,18 +296,16 @@
                             <h5 class="mb-1">
                                 HIGH PERFORMANCE SEALING
                             </h5>
-                            
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-5">
-                    <div class="bg-[#FFFFFF] rounded shadow-lg p-4 d-flex align-items-start card-custom">
+                    <div class="bg-[#FFFFFF] rounded shadow-lg p-4 d-flex align-items-start card-custom wow fadeInUp" data-wow-delay="0.2s">
                         <div class="me-3">
                             <img class="img-fluid bg-white w-20" src="img/high-voltage.png" alt="">
                         </div>
                         <div>
-                            <h5 class="mb-1">HIGH ENERGY EFFICIENY</h5>
-                            
+                            <h5 class="mb-1">HIGH ENERGY EFFICIENCY</h5>
                         </div>
                     </div>
                 </div>
@@ -315,30 +313,28 @@
 
             <div class="row g-4 justify-content-center mt-3">
                 <div class="col-md-6 col-lg-5">
-                    <div class="bg-[#FFFFFF] rounded shadow-lg p-4 d-flex align-items-start card-custom">
+                    <div class="bg-[#FFFFFF] rounded shadow-lg p-4 d-flex align-items-start card-custom wow fadeInUp" data-wow-delay="0.3s">
                         <div class="me-3">
                             <img class="img-fluid bg-white w-20" src="img/sliding-door.png" alt="">
                         </div>
                         <div>
                             <h5 class="mb-1">EASE OF SLIDING </h5>
-                            
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-5">
-                    <div class="bg-[#FFFFFF] rounded shadow-lg p-4 d-flex align-items-start card-custom">
+                    <div class="bg-[#FFFFFF] rounded shadow-lg p-4 d-flex align-items-start card-custom wow fadeInUp" data-wow-delay="0.4s">
                         <div class="me-3">
                             <img class="img-fluid bg-white w-20" src="img/resistence.png" alt="">
                         </div>
                         <div>
                             <h5 class="mb-1">ABRASION RESISTANCE</h5>
-                            
                         </div>
                     </div>
                 </div>
                 <div class="row g-4 justify-content-center mt-4">
                 <div class="col-md-6 col-lg-5">
-                    <div class="bg-[#FFFFFF] rounded shadow-lg p-4 d-flex align-items-start card-custom">
+                    <div class="bg-[#FFFFFF] rounded shadow-lg p-4 d-flex align-items-start card-custom wow fadeInUp" data-wow-delay="0.5s">
                         <div class="me-3">
                             <img class="img-fluid bg-white w-20" src="img/loading.png" alt="">
                         </div>
@@ -346,18 +342,16 @@
                             <h5 class="mb-1">
                                 RESILIENCE 
                             </h5>
-                            
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-5">
-                    <div class="bg-[#FFFFFF] rounded shadow-lg p-4 d-flex align-items-start card-custom">
+                    <div class="bg-[#FFFFFF] rounded shadow-lg p-4 d-flex align-items-start card-custom wow fadeInUp" data-wow-delay="0.6s">
                         <div class="me-3">
                             <img class="img-fluid bg-white w-20" src="img/drop.png" alt="">
                         </div>
                         <div>
                             <h5 class="mb-1">WATER REPELENT</h5>
-                            
                         </div>
                     </div>
                 </div>
@@ -389,6 +383,56 @@
 
     <!---Advantage-->
 
+        <!-- Protection Against Section (Advantage) -->
+        <div class="container-fluid py-4" style="margin-top: 40px;">
+            <div class="container">
+                <div class="row justify-content-center mb-3">
+                    <div class="col-12 text-center">
+                        <p class="text-primary" style="font-weight: 600;font-size: 24px;">Protection</p>
+                        <h2 class="fw-medium mb-2" style="font-family: 'inter', sans-serif; color: #000; font-weight: 600;">Protection against</h2>
+                    </div>
+                </div>
+                <div class="row justify-content-center align-items-center text-center g-4">
+                    <div class="col-6 col-md-2 protection-item">
+                        <img class="wow fadeInUp" data-wow-delay="0.1s" src="Protection-Against/Sound.png" alt="Sound" style="height:180px;">
+                        <div class="fw-semibold mt-2" style="color: #000;font-weight: 600;">SOUND</div>
+                    </div>
+                    <div class="col-6 col-md-2 protection-item">
+                        <img class="wow fadeInUp" data-wow-delay="0.2s" src="Protection-Against/Wind.png" alt="Wind" style="height:180px;">
+                        <div class="fw-semibold mt-2" style="color: #000;font-weight: 600;">WIND</div>
+                    </div>
+                    <div class="col-6 col-md-2 protection-item">
+                        <img class="wow fadeInUp" data-wow-delay="0.3s" src="Protection-Against/Rain.png" alt="Rain" style="height:180px;">
+                        <div class="fw-semibold mt-2" style="color: #000;font-weight: 600;">RAIN</div>
+                    </div>
+                    <div class="col-6 col-md-2 protection-item">
+                        <img class="wow fadeInUp" data-wow-delay="0.4s" src="Protection-Against/Insect.png" alt="Insect" style="height:180px;">
+                        <div class="fw-semibold mt-2" style="color: #000;font-weight: 600;">INSECT</div>
+                    </div>
+                    <div class="col-6 col-md-2 protection-item">
+                        <img class="wow fadeInUp" data-wow-delay="0.5s" src="Protection-Against/Dust.png" alt="Dust" style="height:180px;">
+                        <div class="fw-semibold mt-2" style="color: #000;font-weight: 600;">DUST</div>
+                    </div>
+                        <style>
+                        @media (max-width: 576px) {
+                            .protection-item {
+                                flex: 0 0 100%;
+                                max-width: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                            }
+                            .protection-item img {
+                                height: 180px !important;
+                                width: auto !important;
+    
+                            }
+                        }
+                        </style>
+                </div>
+            </div>
+        </div>
+        <!-- End Protection Against Section -->
 
 
 
@@ -397,7 +441,7 @@
     <div class="container-xxl contact py-5">
         <div class="container">
             <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-                <p class="fs-5 fw-medium fst-italic text-primary">Contact Us</p>
+                <p class="text-primary" style="font-weight: 600;font-size: 24px;">Contact Us</p>
                 <h1 class="display-6">Contact us right now</h1>
             </div>
             <div class="row justify-content-center wow fadeInUp" data-wow-delay="0.1s">
