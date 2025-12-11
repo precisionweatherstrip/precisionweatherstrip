@@ -65,7 +65,7 @@ input,
 textarea,
 select,
 button {
-  font-family: "inter", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -77,7 +77,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "inter", sans-serif;
+  font-family: "Po", sans-serif;
   font-weight: 600;
 }
 .back-to-top {
