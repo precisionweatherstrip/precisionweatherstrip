@@ -66,6 +66,16 @@
                 font-weight: 600;
             }
     </style>
+    <style>
+        /* Move carousel heading up on small screens */
+        @media (max-width: 576px) {
+            #header-carousel .carousel-caption {
+                top: 10% !important;
+                bottom: auto !important;
+                transform: translateY(0) !important;
+            }
+        }
+    </style>
         <style>
             /* Make feature/card images smaller and consistent */
             .card-custom .me-3 img {
