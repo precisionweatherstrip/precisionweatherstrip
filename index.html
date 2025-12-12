@@ -99,10 +99,17 @@
             }
         </style>
         <style>
-            /* Shift up the third carousel image for better visibility */
+            /* Shift up the third carousel image only on desktop */
             .img-shift-up {
                 position: relative;
-                top: -80px; 
+                top: 0; 
+            }
+            
+            /* Apply shift only on desktop screens */
+            @media (min-width: 992px) {
+                .img-shift-up {
+                    top: -180px;
+                }
             }
         </style>
 </head>
