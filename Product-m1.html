@@ -12,7 +12,9 @@
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700;900&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700;900&family=Poppins:wght@400;600;700&display=swap"
+        rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -29,29 +31,64 @@
 
     <style>
         /* Only keeping used CSS */
-        .table-compact th, .table-compact td {
+        .table-compact th,
+        .table-compact td {
             padding: 0.25rem !important;
             font-size: 1rem;
             min-width: 60px;
         }
+
         .table-compact th {
             font-size: 1rem;
         }
+
         .table-compact {
             width: 100% !important;
             max-width: 100% !important;
         }
+
+        /* Pile image before footer – same margins as page content */
+        .pile-inline-img {
+            width: 100%;
+            max-width: 720px;
+            /* matches table/text width */
+            height: auto;
+            display: block;
+            transform: scale(1.56);
+            /* zoom in */
+            transform-origin: left center;
+            /* align from left */
+        }
+
+        /* Tablet */
+        @media (max-width: 991px) {
+            .pile-inline-img {
+                max-width: 100%;
+                transform: scale(1.5);
+            }
+        }
+
+        /* Mobile */
+        @media (max-width: 576px) {
+            .pile-inline-img {
+                transform: scale(1);
+            }
+        }
+
+
         /* Make product images smaller in small view */
         @media (max-width: 576px) {
             .hex img {
                 max-width: 140px;
                 max-height: 140px;
             }
+
             .sketch img {
                 max-width: 120px;
                 max-height: 120px;
             }
         }
+
         /* Center card and content text in small view */
         @media (max-width: 576px) {
             .product-hero .card {
@@ -59,9 +96,11 @@
                 margin-right: auto;
                 display: block;
             }
+
             .product-hero .col-lg-6.col-md-12 {
                 text-align: center;
             }
+
             .product-hero .col-lg-6.col-md-12 h2,
             .product-hero .col-lg-6.col-md-12 p,
             .product-hero .col-lg-6.col-md-12 h5,
@@ -77,6 +116,7 @@
                 width: 100%;
                 font-size: 0.95rem;
             }
+
             .table-responsive {
                 overflow-x: auto;
             }
@@ -87,157 +127,179 @@
 
 <body class="has-fixed-header">
 
-<!-- Navbar Start -->
-<div class="container-fluid bg-white fixed-top">
-    <div class="container">
-        <nav class="navbar navbar-expand-lg bg-white navbar-light py-2 py-lg-0">
-            <a href="index.html" class="m-0">
-                <img id="logo" src="img/logo.png" alt="logo">
-            </a>
+    <!-- Navbar Start -->
+    <div class="container-fluid bg-white fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light py-2 py-lg-0">
+                <a href="index.html" class="m-0">
+                    <img id="logo" src="img/logo.png" alt="logo">
+                </a>
 
-            <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav ms-auto">
-                    <a href="index.html" class="nav-item nav-link">Home</a>
-                    <a href="about.html" class="nav-item nav-link">About</a>
-                    <a href="product.html" class="nav-item nav-link active">Products</a>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="product.html" class="nav-item nav-link active">Products</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <div class="d-flex align-items-center ms-3">
+                        <a href="quote.html" class="btn btn-primary rounded-pill px-4 py-2 btn-get-quote">Get Quote</a>
+                    </div>
+
                 </div>
-                <div class="d-flex align-items-center ms-3">
-                    <a href="quote.html" class="btn btn-primary rounded-pill px-4 py-2 btn-get-quote">Get Quote</a>
-                </div>
-                
-            </div>
-        </nav>
+            </nav>
+        </div>
     </div>
-</div>
-<!-- Navbar End -->
+    <!-- Navbar End -->
 
-<!-- Page Header -->
-<div class="container-fluid page-header py-4">
-    <div class="container text-center py-4">
-        <h1 class="display-6 text-black mb-1" style="color: black;">NON SILICONISED PILE WEATHER STRIP [NS]</h1>
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb justify-content-center mb-0">
-                <li class="breadcrumb-item text-black" aria-current="page">NON SILICONISED PILE WEATHER STRIP [NS]</li>
-            </ol>
-        </nav>
-    </div>
-</div>
-
-<!-- Product Detail -->
-<div class="container py-5">
-  <div class="row align-items-center">
-    <!-- Left Side -->
-    <div class="col-lg-6 col-12 mb-4 mb-lg-0">
-      <h3 class="fw-bold">NON SILICONISED PILE WEATHER STRIP [ NS ]</h3>
-
-      <p>The standard grade pile weather strip with a balanced brush density for effective sealing.</p>
-      <p>Soft non siliconised polypropylene multifilament yarn on a woven backing covered by a layer of polypropylene.</p>
-      <p>It is used for all common economy sealing application as most affordable pile weatherstripping solutions.</p>
-
-      <h5 class="mt-4 fw-semibold">Technical Specifications</h5>
-
-      <div class="table-responsive">
-        <table class="table table-bordered text-center align-middle table-compact">
-          <thead class="table-light">
-            <tr>
-              <th style="border: 2px solid #000; background-color: beige;">BASE WIDTH<br>[mm]</th>
-              <th style="border: 2px solid #000;background-color: beige;">BRUSH HEIGHT<br>[mm]</th>
-              <th style="border: 2px solid #000;background-color: beige;">PILE FORMATION</th>
-              <th style="border: 2px solid #000;background-color: beige;">PACKING</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-              <td style="border: 2px solid #000;">4.8</td>
-              <td style="border: 2px solid #000;">5</td>
-              <td style="border: 2px solid #000;">3P (2+1L)</td>
-              <td style="border: 2px solid #000;">275 M X 8 ROLLS</td>
-            </tr>
-
-            <tr>
-              <td style="border: 2px solid #000;">6.8</td>
-              <td style="border: 2px solid #000;">5</td>
-              <td style="border: 2px solid #000;">3P (3L)</td>
-              <td style="border: 2px solid #000;">250 M X 8 ROLLS</td>
-            </tr>
-
-            <tr>
-              <td style="border: 2px solid #000;">6.2</td>
-              <td style="border: 2px solid #000;">5</td>
-              <td style="border: 2px solid #000;">3P (2+1L)</td>
-              <td style="border: 2px solid #000;">250 M X 8 ROLLS</td>
-            </tr>
-
-          </tbody>
-        </table>
-      </div>
-            <div>
-                <h5 style="font-size: 1.4rem; font-weight: 500; margin-top: 20px; margin-bottom: 0;font-style: italic;">In Various Density and Color, with Non Siliconised, siliconised, Bristle, Self adhesive & Fin Sealed Types.</h5>
-            </div>
+    <!-- Page Header -->
+    <div class="container-fluid page-header py-4">
+        <div class="container text-center py-4">
+            <h1 class="display-6 text-black mb-1" style="color: black;">NON SILICONISED PILE WEATHER STRIP [NS]</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item text-black" aria-current="page">NON SILICONISED PILE WEATHER STRIP [NS]
+                    </li>
+                </ol>
+            </nav>
+        </div>
     </div>
 
-
-    <!-- Right Side -->
-    <div class="col-lg-6 col-12 d-flex flex-column align-items-center">
-      <img src="img/1.webp" alt="Non Siliconised Pile Weather Strip" class="img-fluid mb-4" style="max-width: 200px;">
-      <img src="DIAGRAM/Non-siliconised-pile-weather-strip-[NS].png" alt="Pile Weather Strip Diagram" class="img-fluid" style="max-width: 240px;">
-    </div>
-  </div>
-</div>
-
-<!-- Footer -->
-<div class="container-fluid bg-dark footer mt-5 py-5">
+    <!-- Product Detail -->
     <div class="container py-5">
-        <div class="row g-5">
-            <div class="col-lg-5 col-md-6">
-                <h4 class="text-primary mb-4">Our Office</h4>
-                <p><i class="fa fa-map-marker-alt text-primary me-3"></i>Plot No. 1 To 8 , Type - A, Rs No. 51/1, Shreedhar Vardhan Industrial Park, Alura, Kamrej, Surat - 394310. </p>
-                <p><i class="fa fa-phone-alt text-primary me-3"></i>+91 8000077955</p>
-                <p><i class="fa fa-envelope text-primary me-3"></i>precision_weatherstrip@yahoo.com</p>
+        <div class="row align-items-center">
+            <!-- Left Side -->
+            <div class="col-lg-6 col-12 mb-4 mb-lg-0">
+                <h3 class="fw-bold">NON SILICONISED PILE WEATHER STRIP [ NS ]</h3>
+
+                <p>The standard grade pile weather strip with a balanced brush density for effective sealing.</p>
+                <p>Soft non siliconised polypropylene multifilament yarn on a woven backing covered by a layer of
+                    polypropylene.</p>
+                <p>It is used for all common economy sealing application as most affordable pile weatherstripping
+                    solutions.</p>
+
+                <h5 class="mt-4 fw-semibold">Technical Specifications</h5>
+
+                <div class="table-responsive">
+                    <table class="table table-bordered text-center align-middle table-compact">
+                        <thead class="table-light">
+                            <tr>
+                                <th style="border: 2px solid #000; background-color: beige;">BASE WIDTH<br>[mm]</th>
+                                <th style="border: 2px solid #000;background-color: beige;">BRUSH HEIGHT<br>[mm]</th>
+                                <th style="border: 2px solid #000;background-color: beige;">PILE FORMATION</th>
+                                <th style="border: 2px solid #000;background-color: beige;">PACKING</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td style="border: 2px solid #000;">4.8</td>
+                                <td style="border: 2px solid #000;">5</td>
+                                <td style="border: 2px solid #000;">3P (2+1L)</td>
+                                <td style="border: 2px solid #000;">275 M X 8 ROLLS</td>
+                            </tr>
+
+                            <tr>
+                                <td style="border: 2px solid #000;">6.8</td>
+                                <td style="border: 2px solid #000;">5</td>
+                                <td style="border: 2px solid #000;">3P (3L)</td>
+                                <td style="border: 2px solid #000;">250 M X 8 ROLLS</td>
+                            </tr>
+
+                            <tr>
+                                <td style="border: 2px solid #000;">6.2</td>
+                                <td style="border: 2px solid #000;">5</td>
+                                <td style="border: 2px solid #000;">3P (2+1L)</td>
+                                <td style="border: 2px solid #000;">250 M X 8 ROLLS</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <div>
+                    <h5
+                        style="font-size: 1.4rem; font-weight: 500; margin-top: 20px; margin-bottom: 0;font-style: italic;">
+                        In Various Density and Color, with Non Siliconised, siliconised, Bristle, Self adhesive & Fin
+                        Sealed Types.</h5>
+                </div>
             </div>
 
-            <div class="col-lg-3 col-md-6">
-                <h4 class="text-primary mb-4">Quick Links</h4>
-                <a class="btn btn-link" href="about.html">About Us</a>
-                <a class="btn btn-link" href="contact.html">Contact Us</a>
-            </div>
 
-            <div class="col-lg-4 col-md-6">
-                <h4 class="text-primary mb-4">Business Hours</h4>
-                <p class="mb-1">Monday - Saturday</p>
-                <h6 class="text-light">09:00 am - 06:00 pm</h6>
-                <p class="mb-1">Sunday</p>
-                <h6 class="text-light">Closed</h6>
+            <!-- Right Side -->
+            <div class="col-lg-6 col-12 d-flex flex-column align-items-center">
+                <img src="img/1.webp" alt="Non Siliconised Pile Weather Strip" class="img-fluid mb-4"
+                    style="max-width: 200px;">
+                <img src="DIAGRAM/Non-siliconised-pile-weather-strip-[NS].png" alt="Pile Weather Strip Diagram"
+                    class="img-fluid" style="max-width: 240px;">
             </div>
         </div>
     </div>
-</div>
 
-<div class="container-fluid copyright py-4">
-    <div class="container">
+    <!-- Pile Formation Image (before footer, aligned with content) -->
+    <div class="container py-4">
         <div class="row">
-            <div class="col-md-6 text-center text-md-start">
-                &copy; <a class="fw-medium" href="#">Precision Weather Strips</a>, All Right Reserved.
+            <div class="col-12">
+                <img src="img/pileFormation.jpg" alt="Pile Formation" class="img-fluid pile-inline-img">
             </div>
         </div>
     </div>
-</div>
 
-<!-- Scripts -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-<script src="lib/wow/wow.min.js"></script>
-<script src="lib/easing/easing.min.js"></script>
-<script src="lib/waypoints/waypoints.min.js"></script>
-<script src="lib/owlcarousel/owl.carousel.min.js"></script>
-<script src="js/main.js"></script>
+
+
+
+    <!-- Footer -->
+    <div class="container-fluid bg-dark footer mt-3 py-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-5 col-md-6">
+                    <h4 class="text-primary mb-4">Our Office</h4>
+                    <p><i class="fa fa-map-marker-alt text-primary me-3"></i>Plot No. 1 To 8 , Type - A, Rs No. 51/1,
+                        Shreedhar Vardhan Industrial Park, Alura, Kamrej, Surat - 394310. </p>
+                    <p><i class="fa fa-phone-alt text-primary me-3"></i>+91 8000077955</p>
+                    <p><i class="fa fa-envelope text-primary me-3"></i>precision_weatherstrip@yahoo.com</p>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="text-primary mb-4">Quick Links</h4>
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <h4 class="text-primary mb-4">Business Hours</h4>
+                    <p class="mb-1">Monday - Saturday</p>
+                    <h6 class="text-light">09:00 am - 06:00 pm</h6>
+                    <p class="mb-1">Sunday</p>
+                    <h6 class="text-light">Closed</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid copyright py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    &copy; <a class="fw-medium" href="#">Precision Weather Strips</a>, All Right Reserved.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
 
 </body>
-</html>
 
+</html>
