@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>SELF ADHESIVE NON SILICONSIED PILE WEATHER STRIP [AD NS]</title>
+    <title>SELF ADHESIVE NON SILICONSIED PILE WEATHER STRIP [AD WS]</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
     <!-- Favicon -->
@@ -38,12 +38,13 @@
 
          /* Pile image before footer – same margins as page content */
         .pile-inline-img {
+            --pile-scale: 1.56;
             width: 100%;
             max-width: 720px;
             /* matches table/text width */
             height: auto;
             display: block;
-            transform: scale(1.56);
+            transform: scale(var(--pile-scale));
             /* zoom in */
             transform-origin: left center;
             /* align from left */
@@ -53,14 +54,14 @@
         @media (max-width: 991px) {
             .pile-inline-img {
                 max-width: 100%;
-                transform: scale(1.5);
+                --pile-scale: 1.5;
             }
         }
 
         /* Mobile */
         @media (max-width: 576px) {
             .pile-inline-img {
-                transform: scale(1);
+                --pile-scale: 1;
             }
         }
 
@@ -88,6 +89,21 @@
                 max-width: 100% !important;
             }
         }
+
+        .sub-spec-card {
+            border: 1px solid #d9d9d9;
+            border-radius: 12px;
+            padding: 1rem;
+            background-color: #fff;
+            height: 100%;
+        }
+
+        .sub-spec-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #000;
+            margin-bottom: 0.75rem;
+        }
     </style>
 
 </head>
@@ -111,7 +127,22 @@
                     <div class="navbar-nav ms-auto">
                         <a href="index.html" class="nav-item nav-link">Home</a>
                         <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="product.html" class="nav-item nav-link active">Products</a>
+                        <div class="nav-item dropdown nav-product-dropdown">
+                            <a href="product.html" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown"
+                                aria-expanded="false">Products</a>
+                            <div class="dropdown-menu dropdown-products bg-white rounded-3 m-0">
+                                <a href="product.html" class="dropdown-item">All Products</a>
+                                <a href="Product-m1.html" class="dropdown-item">NS</a>
+                                <a href="Product-m2.html" class="dropdown-item">NS HD</a>
+                                <a href="Product-m3.html" class="dropdown-item">NS ST</a>
+                                <a href="Product-m4.html" class="dropdown-item">AD WS</a>
+                                <a href="Product.m5.html" class="dropdown-item">SL</a>
+                                <a href="Product.m6.html" class="dropdown-item">QFIN SL UV</a>
+                                <a href="Product.m7.html" class="dropdown-item">TN FIN SL UV</a>
+                                <a href="Product.m8.html" class="dropdown-item">TRIFIN SL UV</a>
+                                <a href="Product.m9.html" class="dropdown-item">SL BR</a>
+                            </div>
+                        </div>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div>
                     <div class="d-flex align-items-center ms-3">
@@ -127,13 +158,13 @@
     <div class="container-fluid page-header py-4">
         <div class="container text-center py-4">
             <h1 class="display-6 text-black mb-1" style="color: black;">SELF ADHESIVE NON SILICONSIED PILE WEATHER STRIP
-                [AD NS] </h1>
-            <nav aria-label="breadcrumb">
+                [AD WS] </h1>
+            <!-- <nav aria-label="breadcrumb">
                 <ol class="breadcrumb justify-content-center mb-0">
                     <li class="breadcrumb-item text-black" aria-current="page">SELF ADHESIVE NON SILICONSIED PILE
-                        WEATHER STRIP [AD NS]</li>
+                        WEATHER STRIP [AD WS]</li>
                 </ol>
-            </nav>
+            </nav> -->
         </div>
     </div>
 
@@ -142,7 +173,7 @@
         <div class="row align-items-center">
             <!-- Left Side -->
             <div class="col-lg-6 col-12 mb-4 mb-lg-0">
-                <h3 class="fw-bold">SELF ADHESIVE NON SILICONSIED PILE WEATHER STRIP [AD NS]</h3>
+                <h3 class="fw-bold">SELF ADHESIVE NON SILICONSIED PILE WEATHER STRIP [AD WS]</h3>
                 <p>More dense brush than high density weather strip and multi-filaments are texturized and heat set to
                     make the brush straight.</p>
                 <p> This provides excellent resilience of the brush making it more compression set resistant, ensuring a
@@ -155,38 +186,125 @@
                     <table class="table table-bordered text-center align-middle table-compact">
                         <thead class="table-light">
                             <tr>
-                                <th style="border: 2px solid #000; background-color: beige;">BASE WIDTH<br>[mm]</th>
-                                <th style="border: 2px solid #000;background-color: beige;">BRUSH HEIGHT<br>[mm]</th>
-                                <th style="border: 2px solid #000;background-color: beige;">PILE FORMATION</th>
-                                <th style="border: 2px solid #000;background-color: beige;">PACKING</th>
+                                <th style="border: 2px solid #000; background-color: #fff; font-weight: 500;">Product</th>
+                                <th style="border: 2px solid #000; background-color: #fff; font-weight: 500;">A</th>
+                                <th style="border: 2px solid #000; background-color: #fff; font-weight: 500;">B</th>
+                                
+                            </tr>
+                            <tr>
+                                <th style="border: 2px solid #000; background-color: #e3e6e8;">Name</th>
+                                <th style="border: 2px solid #000; background-color: #e3e6e8;">BASE WIDTH<br>[mm]</th>
+                                <th style="border: 2px solid #000;background-color: #e3e6e8;">BRUSH HEIGHT<br>[mm]</th>
+                                <th style="border: 2px solid #000;background-color: #e3e6e8;">PILE FORMATION</th>
+                                <th style="border: 2px solid #000;background-color: #e3e6e8;">PACKING</th>
                             </tr>
                         </thead>
 
                         <tbody>
                             <tr>
+                                <td style="border: 2px solid #000;">AD WS</td>
                                 <td style="border: 2px solid #000;">9</td>
                                 <td style="border: 2px solid #000;">5</td>
                                 <td style="border: 2px solid #000;">6P (6L)</td>
                                 <td style="border: 2px solid #000;">125 M X 8 ROLLS</td>
                             </tr>
 
+                            <tr>
+                                <td style="border: 2px solid #000;">AD NS ST</td>
+                                <td style="border: 2px solid #000;">9</td>
+                                <td style="border: 2px solid #000;">9</td>
+                                <td style="border: 2px solid #000;">6P (6L)</td>
+                                <td style="border: 2px solid #000;">100 M X 6 ROLLS</td>
+                            </tr>
+
+                            <tr>
+                                <td style="border: 2px solid #000;">AD NS ST</td>
+                                <td style="border: 2px solid #000;">9</td>
+                                <td style="border: 2px solid #000;">12</td>
+                                <td style="border: 2px solid #000;">6P (6L)</td>
+                                <td style="border: 2px solid #000;">125 M X 4 ROLLS</td>
+                            </tr>
+
                         </tbody>
                     </table>
                 </div>
+
+                <!-- <div class="mt-4">
+                    <h5 class="fw-semibold mb-3">AD NS ST</h5>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="sub-spec-card">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered text-center align-middle table-compact mb-0">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th style="border: 2px solid #000; background-color: #fff; font-weight: 500;">A</th>
+                                                <th style="border: 2px solid #000; background-color: #fff; font-weight: 500;">B</th>
+                                                <th style="border: 2px solid #000; background-color: #fff; font-weight: 500;">TYPE</th>
+                                            </tr>
+                                            <tr>
+                                                <th style="border: 2px solid #000; background-color: #e3e6e8;">BASE WIDTH<br>[mm]</th>
+                                                <th style="border: 2px solid #000; background-color: #e3e6e8;">BRUSH HEIGHT<br>[mm]</th>
+                                                <th style="border: 2px solid #000; background-color: #e3e6e8;">VARIANT</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td style="border: 2px solid #000;">9</td>
+                                                <td style="border: 2px solid #000;">9</td>
+                                                <td style="border: 2px solid #000;">AD NS ST</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="sub-spec-card">
+                              
+                                <div class="table-responsive">
+                                    <table class="table table-bordered text-center align-middle table-compact mb-0">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th style="border: 2px solid #000; background-color: #fff; font-weight: 500;">A</th>
+                                                <th style="border: 2px solid #000; background-color: #fff; font-weight: 500;">B</th>
+                                                <th style="border: 2px solid #000; background-color: #fff; font-weight: 500;">TYPE</th>
+                                            </tr>
+                                            <tr>
+                                                <th style="border: 2px solid #000; background-color: #e3e6e8;">BASE WIDTH<br>[mm]</th>
+                                                <th style="border: 2px solid #000; background-color: #e3e6e8;">BRUSH HEIGHT<br>[mm]</th>
+                                                <th style="border: 2px solid #000; background-color: #e3e6e8;">VARIANT</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td style="border: 2px solid #000;">9</td>
+                                                <td style="border: 2px solid #000;">12</td>
+                                                <td style="border: 2px solid #000;">AD NS ST</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
                 <div>
-                    <h5
+                    <!-- <h5
                         style="font-size: 1.5rem; font-weight: 500; margin-top: 20px; margin-bottom: 0; font-style: italic;">
                         In Various Density and Color, with Non Siliconised, siliconised, Bristle, Self adhesive & Fin
-                        Sealed Types.</h5>
+                        Sealed Types.</h5> -->
                 </div>
             </div>
 
             <!-- Right Side -->
             <div class="col-lg-6 col-12 d-flex flex-column align-items-center">
                 <img src="Pile-and-section-images/ADH-ADD.png" alt="Non Siliconised Pile Weather Strip"
-                    class="img-fluid mb-4" style="max-width: 300px;">
+                    class="img-fluid mb-4 product-hover-img" style="max-width: 300px;">
                 <img src="DIAGRAM/Self-achesive-non-siliconsied-pile-weather-strip-[AD-NS].png"
-                    alt="Pile Weather Strip Diagram" class="img-fluid" style="max-width: 250px;">
+                    alt="Pile Weather Strip Diagram" class="img-fluid product-hover-img" style="max-width: 250px;">
             </div>
         </div>
     </div>
@@ -196,7 +314,7 @@
         <div class="row">
             <h2 class="py-4">PILE FORMATION :</h2>
             <div class="col-12">
-                <img src="img/pileFormation1.jpg" alt="Pile Formation" class="img-fluid pile-inline-img">
+                <img src="img/pileFormation1.jpg" alt="Pile Formation" class="img-fluid pile-inline-img product-hover-img">
             </div>
         </div>
     </div>

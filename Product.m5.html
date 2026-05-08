@@ -38,12 +38,13 @@
 
         /* Pile image before footer – same margins as page content */
         .pile-inline-img {
+            --pile-scale: 1.56;
             width: 100%;
             max-width: 720px;
             /* matches table/text width */
             height: auto;
             display: block;
-            transform: scale(1.56);
+            transform: scale(var(--pile-scale));
             /* zoom in */
             transform-origin: left center;
             /* align from left */
@@ -53,14 +54,14 @@
         @media (max-width: 991px) {
             .pile-inline-img {
                 max-width: 100%;
-                transform: scale(1.5);
+                --pile-scale: 1.5;
             }
         }
 
         /* Mobile */
         @media (max-width: 576px) {
             .pile-inline-img {
-                transform: scale(1);
+                --pile-scale: 1;
             }
         }
 
@@ -117,7 +118,22 @@
                     <div class="navbar-nav ms-auto">
                         <a href="index.html" class="nav-item nav-link">Home</a>
                         <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="product.html" class="nav-item nav-link active">Products</a>
+                        <div class="nav-item dropdown nav-product-dropdown">
+                            <a href="product.html" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown"
+                                aria-expanded="false">Products</a>
+                            <div class="dropdown-menu dropdown-products bg-white rounded-3 m-0">
+                                <a href="product.html" class="dropdown-item">All Products</a>
+                                <a href="Product-m1.html" class="dropdown-item">NS</a>
+                                <a href="Product-m2.html" class="dropdown-item">NS HD</a>
+                                <a href="Product-m3.html" class="dropdown-item">NS ST</a>
+                                <a href="Product-m4.html" class="dropdown-item">AD WS</a>
+                                <a href="Product.m5.html" class="dropdown-item">SL</a>
+                                <a href="Product.m6.html" class="dropdown-item">QFIN SL UV</a>
+                                <a href="Product.m7.html" class="dropdown-item">TN FIN SL UV</a>
+                                <a href="Product.m8.html" class="dropdown-item">TRIFIN SL UV</a>
+                                <a href="Product.m9.html" class="dropdown-item">SL BR</a>
+                            </div>
+                        </div>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div>
                     <div class="d-flex align-items-center ms-3">
@@ -134,11 +150,11 @@
     <div class="container-fluid page-header py-4">
         <div class="container text-center py-4">
             <h1 class="display-6 text-black mb-1" style="color: black;">SILICONISED PILE WEATHER STRIP [SL] </h1>
-            <nav aria-label="breadcrumb">
+            <!-- <nav aria-label="breadcrumb">
                 <ol class="breadcrumb justify-content-center mb-0">
                     <li class="breadcrumb-item text-black" aria-current="page">SILICONISED PILE WEATHER STRIP [SL]</li>
                 </ol>
-            </nav>
+            </nav> -->
         </div>
     </div>
 
@@ -163,10 +179,15 @@
                     <table class="table table-bordered text-center align-middle table-compact">
                         <thead class="table-light">
                             <tr>
-                                <th style="border: 2px solid #000; background-color: beige;">BASE WIDTH<br>[mm]</th>
-                                <th style="border: 2px solid #000;background-color: beige;">BRUSH HEIGHT<br>[mm]</th>
-                                <th style="border: 2px solid #000;background-color: beige;">PILE FORMATION</th>
-                                <th style="border: 2px solid #000;background-color: beige;">PACKING</th>
+                                <th style="border: 2px solid #000; background-color: #fff; font-weight: 500;">A</th>
+                                <th style="border: 2px solid #000; background-color: #fff; font-weight: 500;">B</th>
+                               
+                            </tr>
+                            <tr>
+                                <th style="border: 2px solid #000; background-color: #e3e6e8;">BASE WIDTH<br>[mm]</th>
+                                <th style="border: 2px solid #000;background-color: #e3e6e8;">BRUSH HEIGHT<br>[mm]</th>
+                                <th style="border: 2px solid #000;background-color: #e3e6e8;">PILE FORMATION</th>
+                                <th style="border: 2px solid #000;background-color: #e3e6e8;">PACKING</th>
                             </tr>
                         </thead>
 
@@ -221,7 +242,7 @@
                             </tr>
                             <tr>
                                 <td style="border: 2px solid #000;">6</td>
-                                <td style="border: 2px solid #000;">9</td>
+                                <td style="border: 2px solid #000;">10</td>
                                 <td style="border: 2px solid #000;">3P (2+1L)</td>
                                 <td style="border: 2px solid #000;">125 M X 8 ROLLS</td>
                             </tr>
@@ -315,13 +336,6 @@
                                 <td style="border: 2px solid #000;">4P (2L)</td>
                                 <td style="border: 2px solid #000;">100 M X 8 ROLLS</td>
                             </tr>
-                            <tr>
-                                <td style="border: 2px solid #000;">9</td>
-                                <td style="border: 2px solid #000;">5</td>
-                                <td style="border: 2px solid #000;">6P (2+1L)</td>
-                                <td style="border: 2px solid #000;">120 M X 8 ROLLS</td>
-                            </tr>
-
                         </tbody>
                     </table>
                 </div>
@@ -335,12 +349,12 @@
 
             <!-- Right Side -->
             <div class="col-lg-6 col-12 d-flex flex-column align-items-center product-image-col">
-                <img src="img/5.webp" alt="Non Siliconised Pile Weather Strip" class="img-fluid mb-4"
+                <img src="img/5.webp" alt="Non Siliconised Pile Weather Strip" class="img-fluid mb-4 product-hover-img"
                     style="max-width: 300px;">
                 <img src="Pile-and-section-images/SL-ADD.png" alt="Non Siliconised Pile Weather Strip"
-                    class="img-fluid mb-4" style="max-width: 300px;">
+                    class="img-fluid mb-4 product-hover-img" style="max-width: 300px;">
                 <img src="DIAGRAM/Siliconised-pile-weather-strip-[SL].png" alt="Pile Weather Strip Diagram"
-                    class="img-fluid" style="max-width: 300px;">
+                    class="img-fluid product-hover-img" style="max-width: 300px;">
             </div>
         </div>
     </div>
@@ -350,7 +364,7 @@
         <div class="row">
             <h2 class="py-4">PILE FORMATION :</h2>
             <div class="col-12">
-                <img src="img/pileFormation1.jpg" alt="Pile Formation" class="img-fluid pile-inline-img">
+                <img src="img/pileFormation1.jpg" alt="Pile Formation" class="img-fluid pile-inline-img product-hover-img">
             </div>
         </div>
     </div>
