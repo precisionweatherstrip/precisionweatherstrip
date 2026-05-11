@@ -12,8 +12,9 @@
 /* Product note styling: combine size, weight, spacing and style */
 .product-note {
   font-weight: 700;
-  margin-top: 1.5rem; /* move it slightly further down than .mt-3 */
-  font-size: 1.0625rem; 
+  margin-top: 1.5rem;
+  /* move it slightly further down than .mt-3 */
+  font-size: 1.0625rem;
   font-style: italic;
   color: inherit;
 }
@@ -28,7 +29,8 @@
 
 /* Fixed header spacing */
 body.has-fixed-header {
-  padding-top: 90px; /* adjust if navbar is taller */
+  padding-top: 90px;
+  /* adjust if navbar is taller */
 }
 
 @media (max-width: 576px) {
@@ -50,11 +52,13 @@ body.has-fixed-header {
     padding-left: 0.8rem;
     padding-right: 0.8rem;
   }
+
   .navbar .d-flex.align-items-center {
     margin-left: 0 !important;
     margin-right: auto !important;
   }
 }
+
 /********** Template CSS **********/
 :root {
   --primary: #a1a1a1;
@@ -84,6 +88,7 @@ h6 {
   font-family: "Po", sans-serif;
   font-weight: 600;
 }
+
 .back-to-top {
   position: fixed;
   display: none;
@@ -227,11 +232,13 @@ h6 {
   background-color: #f7f7f7;
   padding-left: 1.55rem;
 }
+
 @media (max-width: 576px) {
   #logo {
     max-width: 180px !important;
   }
 }
+
 @media (max-width: 991.98px) {
   .navbar .navbar-brand {
     width: 126px;
@@ -366,7 +373,7 @@ h6 {
   align-items: center;
 }
 
-.page-header .breadcrumb-item + .breadcrumb-item::before {
+.page-header .breadcrumb-item+.breadcrumb-item::before {
   color: var(--light);
 }
 
@@ -431,7 +438,7 @@ h6 {
    section keep a white background so the section background doesn't tint them. */
 .advantages-bg .card-custom,
 .advantages-bg .bg-white,
-.advantages-bg .card-custom > div {
+.advantages-bg .card-custom>div {
   background-color: #ffffff !important;
 }
 
@@ -462,6 +469,7 @@ h6 {
   background: #ffffff;
   color: var(--primary);
 }
+
 /*description start*/
 .product-desc {
   min-height: 80px;
@@ -469,6 +477,7 @@ h6 {
   align-items: center;
   justify-content: center;
 }
+
 .product-desc h5 {
   font-size: 16px;
   line-height: 1.3;
@@ -487,9 +496,11 @@ h6 {
   transform: translateY(-30%);
   transition: transform 0.35s ease-out;
 }
+
 .modal.modal-top.show .modal-dialog {
   transform: translateY(0);
 }
+
 .modal-top .modal-content {
   border-radius: 12px;
   overflow: hidden;
@@ -497,10 +508,8 @@ h6 {
 
 /*** About ***/
 .video {
-  background: linear-gradient(
-      rgba(136, 180, 78, 0.85),
-      rgba(136, 180, 78, 0.85)
-    ),
+  background: linear-gradient(rgba(136, 180, 78, 0.85),
+      rgba(136, 180, 78, 0.85)),
     url(../img/video-bg.jpg) center center no-repeat;
   background-size: cover;
 }
@@ -630,10 +639,8 @@ h6 {
 
 /*** Testimonial ***/
 .testimonial {
-  background: linear-gradient(
-      rgba(136, 180, 78, 0.85),
-      rgba(136, 180, 78, 0.85)
-    ),
+  background: linear-gradient(rgba(136, 180, 78, 0.85),
+      rgba(136, 180, 78, 0.85)),
     url(../img/testimonial-bg.jpg) center center no-repeat;
   background-size: cover;
 }
@@ -722,17 +729,21 @@ h6 {
 /* Style for the navbar */
 .navbar-brand {
   text-decoration: none;
-  color: #333; /* Change this to your desired text color */
+  color: #333;
+  /* Change this to your desired text color */
   font-weight: bold;
-  font-size: 24px; /* Adjust the font size as needed */
+  font-size: 24px;
+  /* Adjust the font size as needed */
   display: flex;
   align-items: center;
 }
 
 /* Style for the logo */
 #logo {
-  max-width: 300px; /* Adjust the logo's maximum width as needed */
-  margin-left: 10px; /* Adjust the spacing between the text and logo */
+  max-width: 300px;
+  /* Adjust the logo's maximum width as needed */
+  margin-left: 10px;
+  /* Adjust the spacing between the text and logo */
 }
 
 /* whatsapp icon */
@@ -744,6 +755,7 @@ h6 {
   color: white;
   font-size: 20px;
 }
+
 .icon-bar {
   position: fixed;
   top: 50%;
@@ -752,12 +764,14 @@ h6 {
   transform: translateY(-50%);
   z-index: 100;
 }
+
 .whatsapp {
   background: #43bf5138;
   border-radius: 0 46% 46% 0;
 }
-.btn-check:checked + .btn-outline-dark,
-.btn-check:active + .btn-outline-dark,
+
+.btn-check:checked+.btn-outline-dark,
+.btn-check:active+.btn-outline-dark,
 .btn-outline-dark:active,
 .btn-outline-dark.active,
 .btn-outline-dark.dropdown-toggle.show {
@@ -765,6 +779,7 @@ h6 {
   background-color: var(--primary);
   border-color: var(--primary);
 }
+
 .btn-outline-dark:hover {
   color: #fff;
   background-color: var(--primary);
@@ -783,16 +798,19 @@ h4 {
 .text-white {
   color: #fff !important;
 }
+
 .value .inner-box h3 {
   font-size: 1em;
   color: #000;
   font-weight: 600;
   margin: 20px 0;
 }
+
 .value .inner-box {
   text-align: center;
   margin: 1rem 0;
 }
+
 .section-header h2 {
   color: #333;
   font-size: 1.75rem;
@@ -838,37 +856,46 @@ h4 {
   0% {
     transform: translate(-50%, -50%) rotate(0deg);
   }
+
   100% {
     transform: translate(-50%, -50%) rotate(360deg);
   }
 }
 
 .carousel-inner {
-  height: 700px; /* Set your desired height for the carousel */
+  height: 700px;
+  /* Set your desired height for the carousel */
 }
 
 .carousel-item img {
-  height: 100%; /* Make images fill the height of the carousel */
-  object-fit: cover; /* Ensure images cover the entire container */
+  height: 100%;
+  /* Make images fill the height of the carousel */
+  object-fit: cover;
+  /* Ensure images cover the entire container */
 }
 
 /* Slight text reduction: make site text a bit smaller */
 html {
-  font-size: 16px; /* slight site-wide increase for all pages */
+  font-size: 16px;
+  /* slight site-wide increase for all pages */
 }
 
 /* Custom card sizing: make certain feature cards a bit taller and slightly narrower */
 .card-custom {
-  min-height: 94px; /* a little taller to give more vertical space */
-  max-width: 460px; /* slightly narrower than the default column for visual emphasis */
+  min-height: 94px;
+  /* a little taller to give more vertical space */
+  max-width: 460px;
+  /* slightly narrower than the default column for visual emphasis */
   width: 100%;
-  margin: 0 auto; /* center inside the column */
+  margin: 0 auto;
+  /* center inside the column */
   box-sizing: border-box;
 }
 
 @media (max-width: 767px) {
   .card-custom {
-    max-width: 100%; /* allow full width on small screens */
+    max-width: 100%;
+    /* allow full width on small screens */
   }
 }
 
@@ -877,9 +904,11 @@ html {
   display: flex;
   align-items: center !important;
 }
+
 .advantages-bg .card-custom .me-3 img {
   display: block;
-  width: 48px; /* ensure consistent icon sizing */
+  width: 48px;
+  /* ensure consistent icon sizing */
   height: 48px;
   object-fit: contain;
 }
@@ -897,16 +926,20 @@ html {
   color: #ffffff;
   min-height: 100%;
 }
+
 .contact-left h3 {
   color: #fff;
   font-weight: 700;
 }
+
 .text-white-90 {
   color: rgba(255, 255, 255, 0.95);
 }
+
 .contact-list {
   margin-top: 1rem;
 }
+
 .contact-item {
   display: flex;
   align-items: center;
@@ -914,13 +947,16 @@ html {
   margin: 14px 0;
   font-weight: 600;
 }
+
 .contact-item .icon {
   font-size: 20px;
   line-height: 1;
 }
+
 .contact-text {
   line-height: 1.2;
 }
+
 .circle-decor {
   position: absolute;
   right: -60px;
@@ -934,12 +970,14 @@ html {
 .contact-form {
   background: #ffffff;
 }
+
 .label-small {
   display: block;
   margin-bottom: 6px;
   color: #666;
   font-weight: 600;
 }
+
 .text-teal {
   color: #666;
 }
@@ -951,6 +989,7 @@ html {
   box-shadow: none !important;
   padding: 10px 6px !important;
 }
+
 .input-underline:focus {
   outline: none !important;
   box-shadow: none !important;
@@ -970,9 +1009,11 @@ html {
   .contact-card {
     display: block;
   }
+
   .contact-left {
     border-radius: 12px 12px 0 0;
   }
+
   .contact-form {
     border-radius: 0 0 12px 12px;
   }
@@ -981,19 +1022,21 @@ html {
 
 /*table border*/
 .product-table-black {
-            border: 2px solid #000 !important;
-        }
-        .product-table-black th,
-        .product-table-black td,br {
-            border: 2px solid #000 !important;
-            color: #000 !important;
-        }
+  border: 2px solid #000 !important;
+}
+
+.product-table-black th,
+.product-table-black td,
+br {
+  border: 2px solid #000 !important;
+  color: #000 !important;
+}
 
 /* Shift all carousel images to top in small view */
 @media (max-width: 576px) {
   #header-carousel .carousel-item img {
     object-position: top !important;
-   
+
   }
 }
 
@@ -1005,13 +1048,12 @@ html {
 }
 
 .product-hover-img:hover {
-  transform: translateY(-10px) scale(1.04);
   box-shadow: 0 22px 44px rgba(17, 24, 39, 0.18);
   filter: brightness(1.03);
 }
 
 .product-hover-img.pile-inline-img:hover {
-  transform: translateY(-8px) scale(var(--pile-scale, 1));
+  /* removed transform */
 }
 
 .ethics-hover-card {
@@ -1025,13 +1067,11 @@ html {
 }
 
 .ethics-hover-card:hover {
-  transform: translateY(-10px);
   background-color: rgba(255, 255, 255, 0.04);
   box-shadow: 0 18px 36px rgba(0, 0, 0, 0.2);
 }
 
 .ethics-hover-card:hover aside img {
-  transform: scale(1.08);
   filter: brightness(1.05);
 }
 
@@ -1040,7 +1080,6 @@ html {
 }
 
 .feature-hover-card:hover {
-  transform: translateY(-10px);
   box-shadow: 0 20px 42px rgba(17, 24, 39, 0.16) !important;
   background-color: #ffffff;
 }
@@ -1050,7 +1089,6 @@ html {
 }
 
 .feature-hover-card:hover .me-3 img {
-  transform: scale(1.08);
   filter: brightness(1.04);
 }
 
@@ -1065,13 +1103,11 @@ html {
 }
 
 .protection-hover-item:hover {
-  transform: translateY(-10px);
   background-color: rgba(50, 195, 108, 0.06);
   box-shadow: 0 18px 36px rgba(17, 24, 39, 0.12);
 }
 
 .protection-hover-item:hover img {
-  transform: scale(1.06);
   filter: brightness(1.03);
 }
 
@@ -1086,7 +1122,6 @@ html {
 }
 
 .contact-hover-card:hover {
-  transform: translateY(-10px);
   background-color: rgba(50, 195, 108, 0.04);
   box-shadow: 0 18px 36px rgba(17, 24, 39, 0.12);
 }
@@ -1140,3 +1175,29 @@ html {
     filter: none;
   }
 }
+
+/* --- Magnifying Glass Effect --- */
+.magnifier-container {
+  position: relative;
+  overflow: visible;
+  display: inline-block;
+}
+
+.magnifier-lens {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4), inset 0 0 10px rgba(0, 0, 0, 0.1);
+  cursor: none;
+  display: none;
+  z-index: 999;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-color: #fff;
+}
+
+.magnifier-active {
+  cursor: none !important;
+}
