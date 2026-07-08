@@ -442,14 +442,17 @@ h6 {
   background-color: #ffffff !important;
 }
 
-.product-carousel .owl-nav {
+.product-carousel .owl-nav,
+.home-product-carousel .owl-nav {
   display: flex;
   justify-content: center;
   margin-top: 30px;
 }
 
 .product-carousel .owl-nav .owl-prev,
-.product-carousel .owl-nav .owl-next {
+.product-carousel .owl-nav .owl-next,
+.home-product-carousel .owl-nav .owl-prev,
+.home-product-carousel .owl-nav .owl-next {
   margin: 0 10px;
   width: 55px;
   height: 55px;
@@ -465,7 +468,9 @@ h6 {
 }
 
 .product-carousel .owl-nav .owl-prev:hover,
-.product-carousel .owl-nav .owl-next:hover {
+.product-carousel .owl-nav .owl-next:hover,
+.home-product-carousel .owl-nav .owl-prev:hover,
+.home-product-carousel .owl-nav .owl-next:hover {
   background: #ffffff;
   color: var(--primary);
 }
@@ -1056,13 +1061,47 @@ br {
   /* removed transform */
 }
 
+/* Styles for magnifier container to support clean zoom without border-radius/shadow issues */
+.magnifier-container {
+  border-radius: 18px;
+  box-shadow: 0 12px 32px rgba(17, 24, 39, 0.12);
+  transition: box-shadow 0.35s ease;
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  width: 100%;
+}
+
+.magnifier-container:hover {
+  box-shadow: 0 22px 44px rgba(17, 24, 39, 0.18);
+}
+
+.magnifier-container .product-hover-img {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  width: 100% !important;
+  height: auto !important;
+}
+
 .ethics-hover-card {
   padding: 18px 12px;
   border-radius: 22px;
   transition: transform 0.35s ease, box-shadow 0.35s ease, background-color 0.35s ease;
 }
 
+.ethics-hover-card aside {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
 .ethics-hover-card aside img {
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
   transition: transform 0.35s ease, filter 0.35s ease;
 }
 
@@ -1076,16 +1115,26 @@ br {
 }
 
 .feature-hover-card {
-  transition: transform 0.35s ease, box-shadow 0.35s ease, background-color 0.35s ease;
+  box-shadow: 0 10px 30px rgba(17, 24, 39, 0.15) !important;
+  border: none !important;
+  border-radius: 12px !important;
+  background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%) !important;
+}
+
+.feature-hover-card h5,
+.feature-hover-card div {
+  background: transparent !important;
+  background-color: transparent !important;
 }
 
 .feature-hover-card:hover {
-  box-shadow: 0 20px 42px rgba(17, 24, 39, 0.16) !important;
-  background-color: #ffffff;
+  box-shadow: 0 10px 30px rgba(17, 24, 39, 0.15) !important;
+  transform: none !important;
 }
 
 .feature-hover-card .me-3 img {
   transition: transform 0.35s ease, filter 0.35s ease;
+  mix-blend-mode: multiply !important;
 }
 
 .feature-hover-card:hover .me-3 img {

@@ -83,6 +83,35 @@
         }
     });
 
+    // Home product carousel
+    $(".home-product-carousel").owlCarousel({
+        autoplay: true,
+        smartSpeed: 1000,
+        margin: 25,
+        loop: true,
+        center: false,
+        dots: false,
+        nav: true,
+        navText: [
+            '<i class="bi bi-chevron-left"></i>',
+            '<i class="bi bi-chevron-right"></i>'
+        ],
+        responsive: {
+            0: {
+                items: 1
+            },
+            576: {
+                items: 2
+            },
+            768: {
+                items: 3
+            },
+            992: {
+                items: 4
+            }
+        }
+    });
+
 
     // Testimonial carousel
     $(".testimonial-carousel").owlCarousel({
@@ -95,7 +124,7 @@
     });
 
 
-    // Magnifying Glass Effect
+    // Magnifying / Panning Zoom Effect (similar to ultrafab.com)
     function initMagnifier() {
         const magnifierTargets = document.querySelectorAll('.magnifier-target');
         
@@ -104,83 +133,59 @@
             if (!target.parentElement.classList.contains('magnifier-container')) {
                 const container = document.createElement('div');
                 container.className = 'magnifier-container';
+                
+                // Transfer margin classes from image to container so spacing is preserved
+                const classesToRemove = [];
+                target.classList.forEach(cls => {
+                    if (/^(m[tbyxse]?-\d+|m-auto)$/.test(cls)) {
+                        container.classList.add(cls);
+                        classesToRemove.push(cls);
+                    }
+                });
+                classesToRemove.forEach(cls => target.classList.remove(cls));
+
+                // Transfer width styles to container if present
+                if (target.style.maxWidth) {
+                    container.style.maxWidth = target.style.maxWidth;
+                }
+                if (target.style.width) {
+                    container.style.width = target.style.width;
+                }
+
                 target.parentNode.insertBefore(container, target);
                 container.appendChild(target);
             }
 
             const container = target.parentElement;
-            let lens = container.querySelector('.magnifier-lens');
             
-            if (!lens) {
-                lens = document.createElement('div');
-                lens.className = 'magnifier-lens';
-                container.appendChild(lens);
-            }
-
-            const zoom = 2; // Zoom level
-
-            function moveMagnifier(e) {
-                const rect = target.getBoundingClientRect();
-                const containerRect = container.getBoundingClientRect();
-                
-                let clientX, clientY;
-                if (e.touches && e.touches.length > 0) {
-                    clientX = e.touches[0].clientX;
-                    clientY = e.touches[0].clientY;
-                } else {
-                    clientX = e.clientX;
-                    clientY = e.clientY;
-                }
-
-                // 1. Position lens exactly under cursor relative to the container
-                const xInContainer = clientX - containerRect.left;
-                const yInContainer = clientY - containerRect.top;
-                
-                lens.style.left = (xInContainer - lens.offsetWidth / 2) + "px";
-                lens.style.top = (yInContainer - lens.offsetHeight / 2) + "px";
-
-                // 2. Calculate background position relative to the image
-                const xInImg = clientX - rect.left;
-                const yInImg = clientY - rect.top;
-
-                const targetWidth = target.offsetWidth;
-                const targetHeight = target.offsetHeight;
-
-                lens.style.backgroundImage = `url('${target.src}')`;
-                lens.style.backgroundSize = (targetWidth * zoom) + "px " + (targetHeight * zoom) + "px";
-                
-                const bgX = (xInImg * zoom) - (lens.offsetWidth / 2);
-                const bgY = (yInImg * zoom) - (lens.offsetHeight / 2);
-                lens.style.backgroundPosition = `-${bgX}px -${bgY}px`;
-            }
-
-            target.addEventListener("mousemove", moveMagnifier);
-            lens.addEventListener("mousemove", moveMagnifier);
+            // Apply inline container styles
+            container.style.overflow = 'hidden';
+            container.style.position = 'relative';
+            container.style.cursor = 'zoom-in';
             
-            target.addEventListener("mouseenter", (e) => {
-                lens.style.display = "block";
-                target.classList.add('magnifier-active');
-                moveMagnifier(e);
-            });
-            
-            container.addEventListener("mouseleave", () => {
-                lens.style.display = "none";
-                target.classList.remove('magnifier-active');
+            // Image styling
+            target.style.transition = 'transform 0.1s ease-out';
+            target.style.transformOrigin = 'center center';
+
+            // Hover tracking
+            container.addEventListener('mousemove', (e) => {
+                const rect = container.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+
+                const xPercent = (x / rect.width) * 100;
+                const yPercent = (y / rect.height) * 100;
+
+                target.style.transform = 'scale(2.2)';
+                target.style.transformOrigin = `${xPercent}% ${yPercent}%`;
             });
 
-            // Touch support
-            target.addEventListener("touchstart", (e) => {
-                lens.style.display = "block";
-                moveMagnifier(e);
+            // Reset image on mouse leave
+            container.style.transition = 'none';
+            container.addEventListener('mouseleave', () => {
+                target.style.transform = 'scale(1)';
+                target.style.transformOrigin = 'center center';
             });
-            target.addEventListener("touchmove", (e) => {
-                if (e.cancelable) e.preventDefault();
-                moveMagnifier(e);
-            }, { passive: false });
-            lens.addEventListener("touchmove", (e) => {
-                if (e.cancelable) e.preventDefault();
-                moveMagnifier(e);
-            }, { passive: false });
         });
     }
 
