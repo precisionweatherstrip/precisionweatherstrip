@@ -908,13 +908,24 @@ html {
 .advantages-bg .card-custom {
   display: flex;
   align-items: center !important;
+  background: #ffffff !important;
+  border: none !important;
+  border-left: 4px solid #002d62 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 10px 30px rgba(17, 24, 39, 0.08) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.advantages-bg .card-custom:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(17, 24, 39, 0.15) !important;
 }
 
 .advantages-bg .card-custom .me-3 img {
   display: block;
-  width: 48px;
+  width: 56px;
   /* ensure consistent icon sizing */
-  height: 48px;
+  height: 56px;
   object-fit: contain;
 }
 
@@ -1050,6 +1061,11 @@ br {
   box-shadow: 0 12px 32px rgba(17, 24, 39, 0.12);
   transition: transform 0.35s ease, box-shadow 0.35s ease, filter 0.35s ease;
   will-change: transform;
+}
+
+.product-hover-img[src^="DIAGRAM/"] {
+  background-color: #ffffff;
+  padding: 20px;
 }
 
 .product-hover-img:hover {
@@ -1249,4 +1265,121 @@ br {
 
 .magnifier-active {
   cursor: none !important;
-}
+}
+
+@media (min-width: 768px) {
+  .footer h4 {
+    white-space: nowrap;
+  }
+}
+
+/* Color Options styling */
+.color-options-container {
+  margin: 25px 0;
+}
+
+.color-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #333333;
+}
+
+.color-swatch-group {
+  display: flex;
+  gap: 20px;
+}
+
+.color-swatch-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  width: 65px;
+}
+
+.color-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  /* border: 1px solid #cccccc; */
+  padding: 3px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.color-circle-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.color-circle-inner.grey {
+  background-color: #888888;
+}
+
+.color-circle-inner.black {
+  background-color: #111111;
+}
+
+
+
+.color-name {
+  margin-top: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #120c0c;
+  text-align: center;
+}
+
+/* Rectangular Color Options styling */
+.color-rect-group {
+  display: flex;
+  gap: 15px;
+}
+
+.color-rect-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 40px;
+  border-radius: 6px;
+  border: 1px solid #cccccc;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-transform: uppercase;
+}
+
+.color-rect-item.grey {
+  background-color: #888888;
+  color: #000000; /* Grey box -> black text */
+  border: none !important;
+}
+
+.color-rect-item.black {
+  background-color: #111111;
+  color: #ffffff; /* Black box -> white text */
+}
+
+/* Hover & Active states */
+.color-rect-item:hover {
+  opacity: 0.9;
+  border-color: #002d62;
+  box-shadow: 0 0 0 1px #002d62;
+}
+
+.color-rect-item.active {
+  border-color: #002d62;
+  box-shadow: 0 0 0 2px #002d62;
+}
+
+.color-rect-item.grey:hover,
+.color-rect-item.grey.active {
+  border: none !important;
+  box-shadow: none !important;
+}
