@@ -59,24 +59,21 @@
             }
         }
 
-        @media (max-width: 576px) {
+        .table-compact th,
+        .table-compact td {
+            padding: 0.25rem !important;
+            font-size: 1rem;
+            min-width: 60px;
+        }
 
-            .table-compact th,
-            .table-compact td {
-                padding: 0.25rem !important;
-                font-size: 0.85rem;
-                min-width: 60px;
-            }
+        .table-compact th {
+            font-size: 1rem;
+        }
 
-            .table-compact th {
-                font-size: 0.8rem;
-            }
-
-            .table-compact {
+        .table-compact {
+            width: 100% !important;
+            max-width: 100% !important;
             border: none !important;
-                width: 100% !important;
-                max-width: 100% !important;
-            }
         }
     </style>
 
@@ -121,9 +118,9 @@
                         </div>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div>
-                    <div class="d-flex align-items-center ms-3">
+                    <!-- <div class="d-flex align-items-center ms-3">
                         <a href="quote.html" class="btn btn-primary rounded-pill px-4 py-2 btn-get-quote">Get Quote</a>
-                    </div>
+                    </div> -->
 
                 </div>
             </nav>
@@ -164,8 +161,8 @@
                                 <th colspan="2" style="border: none !important; background: transparent !important; padding: 0 !important;"></th>
                             </tr>
                             <tr>
-                                <th style="border: 2px solid #000; background-color: #e3e6e8;">BASE WIDTH<br>[mm]</th>
-                                <th style="border: 2px solid #000;background-color: #e3e6e8;">BRUSH HEIGHT<br>[mm]</th>
+                                <th style="border: 2px solid #000; background-color: #e3e6e8;">BASE WIDTH<br><span style="font-weight: normal;">[mm]</span></th>
+                                <th style="border: 2px solid #000;background-color: #e3e6e8;">BRUSH HEIGHT<br><span style="font-weight: normal;">[mm]</span></th>
                                 <th style="border: 2px solid #000;background-color: #e3e6e8;">PILE FORMATION</th>
                                 <th style="border: 2px solid #000;background-color: #e3e6e8;">PACKING</th>
                             </tr>

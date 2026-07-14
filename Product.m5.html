@@ -71,31 +71,24 @@
             }
         }
 
-        @media (max-width: 576px) {
+        .table-compact th,
+        .table-compact td {
+            padding: 0.25rem !important;
+            font-size: 1rem;
+            min-width: 60px;
+        }
 
-            .table-compact th,
-            .table-compact td {
-                padding: 0.25rem !important;
-                font-size: 0.85rem;
-                min-width: 60px;
-            }
+        .table-compact th {
+            font-size: 1rem;
+        }
 
-            .table-compact th {
-                font-size: 0.8rem;
-            }
-
-            .table-compact {
+        .table-compact {
+            width: 100% !important;
+            max-width: 100% !important;
             border: none !important;
-                width: 100% !important;
-                max-width: 100% !important;
-            }
         }
 
-        @media (min-width: 992px) {
-            .product-image-col {
-                margin-top: -300px;
-            }
-        }
+
     </style>
 
 </head>
@@ -122,7 +115,7 @@
                         <div class="nav-item dropdown nav-product-dropdown">
                             <a href="product.html" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown"
                                 aria-expanded="false">Products</a>
-                           <div class="dropdown-menu dropdown-products bg-white rounded-3 m-0">
+                            <div class="dropdown-menu dropdown-products bg-white rounded-3 m-0">
                                 <a href="product.html" class="dropdown-item">All Products</a>
                                 <a href="Product-m1.html" class="dropdown-item">NON SILICONISED WEATHER STRIP</a>
                                 <a href="Product-m2.html" class="dropdown-item">NON SILICONISED HIGH DENSITY WEATHER
@@ -139,9 +132,9 @@
                         </div>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div>
-                    <div class="d-flex align-items-center ms-3">
+                    <!-- <div class="d-flex align-items-center ms-3">
                         <a href="quote.html" class="btn btn-primary rounded-pill px-4 py-2 btn-get-quote">Get Quote</a>
-                    </div>
+                    </div> -->
 
                 </div>
             </nav>
@@ -168,12 +161,13 @@
             <!-- Left Side -->
             <div class="col-lg-6 col-12 mb-4 mb-lg-0">
                 <p>
-                    This weather strip is made of highly sense silicone treated multifilament yarn with heat set
-                    processed to make resilience effect.It has more thick backing of the polypropylene making it very
+                    This weather strip is made of highly dense silicone treated multifilament yarn with heat set
+                    processed to make resilience effect, It has more thick backing of the polypropylene making it very
                     rigid and durable.</p>
-                <p> Due to water repellent nature,it reduces water penetration and because of high density,reduces air
-                    infiltration therefore , enhance weather resistance making it highly energy,durable and friction
-                    resistance</p>
+                <p> Due to water repellent nature, it reduces water penetration and because of high density, reduces air
+                    infiltration therefore, enhance weather resistance making it highly energy efficient, durable and
+                    friction
+                    resistance.</p>
 
 
                 <h5 class="mt-4 fw-semibold">Technical Specifications</h5>
@@ -184,13 +178,17 @@
                             <tr>
                                 <th style="border: 2px solid #000; background-color: #fff; font-weight: 500;">A</th>
                                 <th style="border: 2px solid #000; background-color: #fff; font-weight: 500;">B</th>
-                               
-                            
-                                <th colspan="2" style="border: none !important; background: transparent !important; padding: 0 !important;"></th>
+
+
+                                <th colspan="2"
+                                    style="border: none !important; background: transparent !important; padding: 0 !important;">
+                                </th>
                             </tr>
                             <tr>
-                                <th style="border: 2px solid #000; background-color: #e3e6e8;">BASE WIDTH<br>[mm]</th>
-                                <th style="border: 2px solid #000;background-color: #e3e6e8;">BRUSH HEIGHT<br>[mm]</th>
+                                <th style="border: 2px solid #000; background-color: #e3e6e8;">BASE WIDTH<br><span
+                                        style="font-weight: normal;">[mm]</span></th>
+                                <th style="border: 2px solid #000;background-color: #e3e6e8;">BRUSH HEIGHT<br><span
+                                        style="font-weight: normal;">[mm]</span></th>
                                 <th style="border: 2px solid #000;background-color: #e3e6e8;">PILE FORMATION</th>
                                 <th style="border: 2px solid #000;background-color: #e3e6e8;">PACKING</th>
                             </tr>
@@ -344,13 +342,13 @@
                         </tbody>
                     </table>
                 </div>
-              
+
             </div>
 
             <!-- Right Side -->
-            <div class="col-lg-6 col-12 d-flex flex-column align-items-center product-image-col">
-                <img src="img/5(1).png" alt="Non Siliconised Pile Weather Strip" class="img-fluid mb-4 product-hover-img magnifier-target"
-                    style="max-width: 300px;">
+            <div class="col-lg-6 col-12 d-flex flex-column align-items-center">
+                <img src="img/5(1).png" alt="Non Siliconised Pile Weather Strip"
+                    class="img-fluid mb-4 product-hover-img magnifier-target" style="max-width: 300px;">
                 <img src="Pile-and-section-images/SL-ADD.png" alt="Non Siliconised Pile Weather Strip"
                     class="img-fluid mb-4 product-hover-img magnifier-target" style="max-width: 300px;">
                 <img src="DIAGRAM/Siliconised-pile-weather-strip-[SL].png" alt="Pile Weather Strip Diagram"
@@ -390,7 +388,8 @@
         <div class="row">
             <h2 class="py-4">PILE FORMATION :</h2>
             <div class="col-12">
-                <img src="img/pileFormation1.jpg" alt="Pile Formation" class="img-fluid pile-inline-img product-hover-img">
+                <img src="img/pileFormation1.jpg" alt="Pile Formation"
+                    class="img-fluid pile-inline-img product-hover-img">
             </div>
         </div>
     </div>
@@ -429,7 +428,7 @@
                     <a class="btn btn-link" href="about.html">About Us</a>
                     <a class="btn btn-link" href="product.html">Products</a>
                     <a class="btn btn-link" href="contact.html">Contact Us</a>
-                    
+
 
                     <!-- <a class="btn btn-link" href="">Our Services</a>
                     <a class="btn btn-link" href="">Terms & Condition</a>
