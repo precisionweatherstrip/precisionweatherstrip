@@ -59,6 +59,7 @@
             pointer-events: none;
         }
 
+
         /* Keep carousel captions above the overlay */
         #header-carousel .carousel-caption,
         #header-carousel .carousel-caption .container {
@@ -109,7 +110,7 @@
                 width: 100%;
                 height: 100%;
                 object-fit: contain !important;
-                object-position: center !important;
+                object-position: center top !important;
             }
 
             #header-carousel .carousel-control-prev,
@@ -144,7 +145,7 @@
                 width: 100%;
                 height: 100%;
                 object-fit: contain !important;
-                object-position: center !important;
+                object-position: center;
             }
         }
     </style>
@@ -184,36 +185,35 @@
     <style>
         /* Ensure carousel has proper height on all devices */
         #header-carousel {
-            min-height: 370px;
+            min-height: 500px;
         }
 
         #header-carousel .carousel-inner,
         #header-carousel .carousel-item {
-            min-height: 370px;
+            min-height: 500px;
         }
 
-        /* Make all carousel images fully visible with proper sizing */
+        /* Make all carousel images fully visible with proper sizing and align to the right to blend left side seamlessly */
         #header-carousel .carousel-item img {
-            min-height: 370px;
-            max-height: 520px;
-            object-fit: contain !important;
-            object-position: center !important;
+            min-height: 500px;
+            max-height: 700px;
+            object-fit: contain;
+            object-position: right center;
+            background-color: #ffffff;
         }
 
-        #header-carousel .carousel-item img[src*="p3.png"] {
-            transform: scale(1.5) !important;
-        }
-
-        /* Prevent the white and black window profile images from being cut at the top-right */
-        #header-carousel .carousel-item img[src*="carousel-1.png"],
-        #header-carousel .carousel-item img[src*="p2.png"] {
-            height: 100% !important;
+        /* Align carousel-1.png to the right bottom with contain to prevent cut-off and blend left side seamlessly */
+        #header-carousel .carousel-item img[src*="carousel-1.png"] {
             width: 100% !important;
-            min-height: unset !important;
-            max-height: unset !important;
+            height: 100% !important;
             object-fit: contain !important;
+            object-position: right bottom !important;
+            background-color: #ffffff;
+        }
+
+        /* Center specific carousel images that have centered content so others are not affected */
+        #header-carousel .carousel-item img.carousel-img-center {
             object-position: center !important;
-            transform: none !important;
         }
 
         /* Larger height on bigger screens */
@@ -222,12 +222,12 @@
             #header-carousel,
             #header-carousel .carousel-inner,
             #header-carousel .carousel-item {
-                min-height: 350px;
+                min-height: 600px;
             }
 
             #header-carousel .carousel-item img {
-                min-height: 350px;
-                max-height: 500px;
+                min-height: 600px;
+                max-height: 850px;
 
             }
         }
@@ -237,12 +237,12 @@
             #header-carousel,
             #header-carousel .carousel-inner,
             #header-carousel .carousel-item {
-                min-height: 370px;
+                min-height: 650px;
             }
 
             #header-carousel .carousel-item img {
-                min-height: 370px;
-                max-height: 520px;
+                min-height: 650px;
+                max-height: 900px;
             }
         }
 
@@ -341,18 +341,15 @@
 
 
     <!-- Carousel Start -->
-    <div class="container-fluid px-0 mb-0">
+    <div class="container-fluid px-0 mb-5">
         <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
-
-
-
 
                 <div class="carousel-item active" style="height: 420px; min-height: 420px;">
                     <div class="d-flex flex-column align-items-center justify-content-center bg-white"
                         style="position: absolute; inset: 0; padding: 15px;">
                         <img src="img/shedowlogo.jpeg" alt="Precision Icon Logo"
-                            style="max-height: 70%; max-width: 85%; object-fit: contain !important; object-position: center !important; min-height: auto !important; margin-bottom: 20px;">
+                            style="max-height: 75%; max-width: 85%; object-fit: contain !important; object-position: center !important; min-height: auto !important; margin-bottom: 20px;">
                         <img src="img/Screenshot 2026-07-15 111935.png" alt="Precision Weather Strip"
                             style="max-height: 30%; max-width: 150%; object-fit: contain !important; object-position: center !important; min-height: auto !important;">
                     </div>
@@ -364,15 +361,13 @@
                         <div class="container">
                             <div class="row justify-content-center">
                                 <div class="col-lg-7 text-center">
+                                    <!-- <p class="fs-4 text-white animated zoomIn">Welcome to <strong class="text-dark">Precision Weather Strip</strong></p> -->
                                     <h1 class="display-1 text-dark mb-4 animated zoomIn">Precise Sealing Solution</h1>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-
-
                 <div class="carousel-item">
                     <img class="w-100" src="img/Product/p2.png" alt="Image">
                     <div class="carousel-caption">
@@ -387,7 +382,7 @@
                     </div>
                 </div>
                 <div class="carousel-item">
-                    <img class="w-100" src="img/Product/p3.png" alt="Image">
+                    <img class="w-100 carousel-img-center" src="img/Product/p3.png" alt="Image">
                     <div class="carousel-caption">
                         <div class="container">
                             <div class="row justify-content-center">
