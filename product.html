@@ -1,185 +1,218 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Precision Weather Strip</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
 
     <!-- Favicon -->
-    <link href="img/favicon.png" rel="icon">
+    <link href="img/favicon.png" rel="icon" />
 
     <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700;900&family=Poppins:wght@400;600;700&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Playfair+Display:wght@700;900&family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" />
 
     <!-- Small local tweaks for catalog section -->
     <style>
-        /* make right column a full-height column and push buttons to bottom */
-        .catalog-open .col-md-6.right {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            min-height: 420px;
-            /* match image height so buttons sit at bottom */
-        }
+      /* make right column a full-height column and push buttons to bottom */
+      .catalog-open .col-md-6.right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 420px;
+        /* match image height so buttons sit at bottom */
+      }
 
-        /* nudge the heading slightly up and control spacing to the paragraph */
-        .catalog-open h3 {
-            margin-top: -8px;
-            margin-bottom: 0.4rem;
-        }
+      /* nudge the heading slightly up and control spacing to the paragraph */
+      .catalog-open h3 {
+        margin-top: -8px;
+        margin-bottom: 0.4rem;
+      }
 
-        .catalog-open .content p {
-            margin-bottom: 0.75rem;
-        }
+      .catalog-open .content p {
+        margin-bottom: 0.75rem;
+      }
 
-        /* small extra spacing at the bottom for the buttons */
-        .catalog-open .buttons {
-            margin-bottom: 6px;
-        }
+      /* small extra spacing at the bottom for the buttons */
+      .catalog-open .buttons {
+        margin-bottom: 6px;
+      }
 
-        /* custom download button color (#FECC01) */
-        .catalog-open .buttons .btn-download {
-            display: inline-block;
-            background-color: #FECC01;
-            border-color: #FECC01;
-            color: #000;
-        }
+      /* custom download button color (#FECC01) */
+      .catalog-open .buttons .btn-download {
+        display: inline-block;
+        background-color: #fecc01;
+        border-color: #fecc01;
+        color: #000;
+      }
 
-        .catalog-open .buttons .btn-download:hover,
-        .catalog-open .buttons .btn-download:focus {
-            background-color: #e6bf08;
-            border-color: #e6bf08;
-            color: #000;
-            text-decoration: none;
-            box-shadow: none;
-        }
+      .catalog-open .buttons .btn-download:hover,
+      .catalog-open .buttons .btn-download:focus {
+        background-color: #e6bf08;
+        border-color: #e6bf08;
+        color: #000;
+        text-decoration: none;
+        box-shadow: none;
+      }
 
-        /* view button: black border, on hover turn #FECC01 */
-        .catalog-open .buttons .btn-view {
-            display: inline-block;
-            background-color: transparent;
-            border: 1px solid #000;
-            color: #000;
-        }
+      /* view button: black border, on hover turn #FECC01 */
+      .catalog-open .buttons .btn-view {
+        display: inline-block;
+        background-color: transparent;
+        border: 1px solid #000;
+        color: #000;
+      }
 
-        .catalog-open .buttons .btn-view:hover,
-        .catalog-open .buttons .btn-view:focus {
-            background-color: #FECC01;
-            border-color: #FECC01;
-            color: #000;
-            text-decoration: none;
-            box-shadow: none;
-        }
+      .catalog-open .buttons .btn-view:hover,
+      .catalog-open .buttons .btn-view:focus {
+        background-color: #fecc01;
+        border-color: #fecc01;
+        color: #000;
+        text-decoration: none;
+        box-shadow: none;
+      }
 
-        /* Ensure product carousel images are uniform squares */
+      /* Ensure product carousel images are uniform squares */
+      .product-item img {
+        width: 220px;
+        height: 360px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* Smaller images on narrow viewports */
+      @media (max-width: 576px) {
         .product-item img {
-            width: 220px;
-            height: 360px;   
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            
+          width: 140px;
+          height: 260px;
         }
+      }
 
-        /* Smaller images on narrow viewports */
-        @media (max-width: 576px) {
-            .product-item img {
-                width: 140px;
-                height: 260px;
-            }
-        }
+      .page-header h1 {
+        font-family: "Inter", sans-serif;
+        font-weight: 500;
+        color: #000;
+      }
 
+      /* Make product carousel headings black */
+      .product-desc h5.text-primary {
+        color: #000 !important;
+      }
 
-        .page-header h1 {
-            font-family: 'Inter', sans-serif;
-            font-weight: 500;
-            color: #000;
-        }
-
-        /* Make product carousel headings black */
-        .product-desc h5.text-primary {
-            color: #000 !important;
-        }
-
-        /* Make Precision Brochure heading and content black */
-        .catalog-open h3,
-        .catalog-open .content p,
-        .catalog-open .content,
-        .catalog-open .buttons a,
-        .catalog-open .buttons i {
-            color: #000 !important;
-        }
+      /* Make Precision Brochure heading and content black */
+      .catalog-open h3,
+      .catalog-open .content p,
+      .catalog-open .content,
+      .catalog-open .buttons a,
+      .catalog-open .buttons i {
+        color: #000 !important;
+      }
     </style>
-</head>
+  </head>
 
-<body class="has-fixed-header">
+  <body class="has-fixed-header">
     <!-- Spinner Start -->
-    <div id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="loader-container">
-            <img src="img/favicon.png" alt="Logo" class="loader-logo">
-        </div>
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div class="loader-container">
+        <img src="img/favicon.png" alt="Logo" class="loader-logo" />
+      </div>
     </div>
     <!-- Spinner End -->
 
-
     <!-- Navbar Start -->
     <div class="container-fluid bg-white fixed-top">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg bg-white navbar-light py-2 py-lg-0">
-                <!-- <a href="index.html" class="navbar-brand"> -->
-                <a href="index.html" class="m-0">
-                    <img id="logo" src="img/newlogo.png" alt="logo">
-                </a>
-                <!-- </a> -->
-                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
-                    data-bs-target="#navbarCollapse" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav ms-auto">
-                        <a href="index.html" class="nav-item nav-link">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About Us</a>
-                        <div class="nav-item dropdown nav-product-dropdown">
-                            <a href="product.html" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown"
-                                aria-expanded="false">Products</a>
-                           <div class="dropdown-menu dropdown-products bg-white rounded-3 m-0">
-                                <a href="product.html" class="dropdown-item">All Products</a>
-                                <a href="Product-m1.html" class="dropdown-item">NON SILICONISED WEATHER STRIP</a>
-                                <a href="Product-m2.html" class="dropdown-item">NON SILICONISED HIGH DENSITY WEATHER
-                                    STRIP</a>
-                                <a href="Product-m3.html" class="dropdown-item">NON SILICONISED STRAIGHT BRUSH WEATHER
-                                    STRIP</a>
-                                <a href="Product-m4.html" class="dropdown-item">SELF ADHESIVE WEATHER STRIP</a>
-                                <a href="Product.m5.html" class="dropdown-item">SILICONISED WEATHER STRIP</a>
-                                <a href="Product.m6.html" class="dropdown-item">QUIET FIN SEALED WEATHER STRIP</a>
-                                <a href="Product.m7.html" class="dropdown-item">TRANSPARENT FIN SEALED WEATHER STRIP</a>
-                                <a href="Product.m8.html" class="dropdown-item">TRIFIN SEALED WEATHER STRIP</a>
-                                <a href="Product.m9.html" class="dropdown-item">BRISTLE WEATHER STRIP</a>
-                            </div>
-                        </div>
-                        <!-- <a href="store.html" class="nav-item nav-link">Store</a>
+      <div class="container">
+        <nav class="navbar navbar-expand-lg bg-white navbar-light py-2 py-lg-0">
+          <!-- <a href="index.html" class="navbar-brand"> -->
+          <a href="index.html" class="m-0">
+            <img id="logo" src="img/newlogo.png" alt="logo" />
+          </a>
+          <!-- </a> -->
+          <button
+            type="button"
+            class="navbar-toggler ms-auto me-0"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto">
+              <a href="index.html" class="nav-item nav-link">Home</a>
+              <a href="about.html" class="nav-item nav-link">About Us</a>
+              <div class="nav-item dropdown nav-product-dropdown">
+                <a
+                  href="product.html"
+                  class="nav-link dropdown-toggle active"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  >Products</a
+                >
+                <div
+                  class="dropdown-menu dropdown-products bg-white rounded-3 m-0"
+                >
+                  <a href="product.html" class="dropdown-item">All Products</a>
+                  <a href="Product-m1.html" class="dropdown-item"
+                    >NON SILICONISED WEATHER STRIP</a
+                  >
+                  <a href="Product-m2.html" class="dropdown-item"
+                    >NON SILICONISED HIGH DENSITY WEATHER STRIP</a
+                  >
+                  <a href="Product-m3.html" class="dropdown-item"
+                    >NON SILICONISED STRAIGHT BRUSH WEATHER STRIP</a
+                  >
+                  <a href="Product-m4.html" class="dropdown-item"
+                    >SELF ADHESIVE WEATHER STRIP</a
+                  >
+                  <a href="Product.m5.html" class="dropdown-item"
+                    >SILICONISED WEATHER STRIP</a
+                  >
+                  <a href="Product.m6.html" class="dropdown-item"
+                    >QUIET FIN SEALED WEATHER STRIP</a
+                  >
+                  <a href="Product.m7.html" class="dropdown-item"
+                    >TRANSPARENT FIN SEALED WEATHER STRIP</a
+                  >
+                  <a href="Product.m8.html" class="dropdown-item"
+                    >TRIFIN SEALED WEATHER STRIP</a
+                  >
+                  <a href="Product.m9.html" class="dropdown-item"
+                    >BRISTLE WEATHER STRIP</a
+                  >
+                </div>
+              </div>
+              <!-- <a href="store.html" class="nav-item nav-link">Store</a>
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                             <div class="dropdown-menu bg-light rounded-0 m-0">
@@ -189,158 +222,274 @@
                                 <a href="404.html" class="dropdown-item">404 Page</a>
                             </div>
                         </div> -->
-                        <a href="contact.html" class="nav-item nav-link">Contact</a>
-                    </div>
-                    <!-- <div class="d-flex align-items-center ms-3">
+              <a href="contact.html" class="nav-item nav-link">Contact</a>
+            </div>
+            <!-- <div class="d-flex align-items-center ms-3">
                         <a href="quote.html" class="btn btn-primary rounded-pill px-4 py-2 btn-get-quote">Get Quote</a>
                     </div> -->
-                </div>
-            </nav>
-        </div>
+          </div>
+        </nav>
+      </div>
     </div>
     <!-- Navbar End -->
 
-
     <!-- Page Header Start -->
-    <div class="container-fluid page-header py-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container text-center py-5">
-            <h1 class="display-2 text-dark mb-4 animated slideInDown" style="font-weight:600;">Products</h1>
-            <nav aria-label="breadcrumb animated slideInDown">
-                <ol class="breadcrumb justify-content-center mb-0">
-                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumb-item text-dark" aria-current="page">Products</li>
-                </ol>
-            </nav>
-        </div>
+    <div
+      class="container-fluid page-header py-5 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="container text-center py-5">
+        <h1
+          class="display-2 text-dark mb-4 animated slideInDown"
+          style="font-weight: 600"
+        >
+          Products
+        </h1>
+        <nav aria-label="breadcrumb animated slideInDown">
+          <ol class="breadcrumb justify-content-center mb-0">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item text-dark" aria-current="page">
+              Products
+            </li>
+          </ol>
+        </nav>
+      </div>
     </div>
     <!-- Page Header End -->
 
     <!-- whatsappicon start -->
     <div class="icon-bar">
-        <a href="https://api.whatsapp.com/send?phone=+918000077955&amp;text=Hello" target="_blank" class="whatsapp" rel="noopener noreferrer">
-            <img src="img/whatsapp/whatsapp.svg" width="40" height="40" alt="WhatsApp">
-        </a>
+      <a
+        href="https://api.whatsapp.com/send?phone=+918000077955&amp;text=Hello"
+        target="_blank"
+        class="whatsapp"
+        rel="noopener noreferrer"
+      >
+        <img
+          src="img/whatsapp/whatsapp.svg"
+          width="40"
+          height="40"
+          alt="WhatsApp"
+        />
+      </a>
     </div>
     <!-- whatsappicon End -->
 
     <!-- Products Start -->
     <div class="container-fluid product py-5">
-        <div class="container py-5">
-            <div class="section-title text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-                <p class="text-primary" style="color:#000 !important; font-weight: 600; font-size: 24px;">Our Products
-                </p>
-                <h2 class="display-6" style="color:#000 !important;">Ultimate Effective Pile Weather Strip</h2>
-                <p class="text-muted" style="color:#000 !important;">We manufacture a wide array of high-performance
-                    pile weather strips, <br />fully customized to meet precise specifications of size, pile density,
-                    color & types for fenestration industry.</p>
-            </div>
-
-            <div class="owl-carousel product-carousel wow fadeInUp" data-wow-delay="0.5s">
-
-                <!-- 1 -->
-                <a href="Product-m1.html" class="product-item d-flex flex-column rounded text-center"
-                    style="height: 420px;">
-
-                    <div class="img-box">
-                        <img class="magnifier-target" src="img/1.webp" alt="NON SILICONISED PILE WEATHER STRIP [NS]"
-                        style="object-fit:cover; object-position:center 80%;">
-                    </div>
-                    
-                    <div class="bg-white text-center p-3  position-relative mt-n4 mx-3  product-desc">
-                        
-                        <h5 class="text-primary mb-0">
-                            NON SILICONISED PILE WEATHER STRIP [NS]
-                        </h5>
-                    </div>
-                </a>
-
-
-
-                <!-- 2 -->
-                <a href="Product-m2.html" class="d-block product-item rounded text-center">
-                    <img class="magnifier-target" src="img/2.webp" alt="NON SILICONISED HIGH DENSITY PILE WEATHER STRIP [NS HD]">
-                    <div class="bg-white text-center p-3 position-relative mt-n4 mx-3 product-desc">
-                        <h5 class="text-primary mb-0">NON SILICONISED HIGH DENSITY PILE WEATHER STRIP [NS HD]</h5>
-                    </div>
-                </a>
-
-                <!-- 3 -->
-                <a href="Product-m3.html" class="d-block product-item rounded text-center">
-                    <img class="magnifier-target" src="img/3.webp" alt="NON SILICONISED STRAIGHT BRUSH PILE WEATHER STRIP [NS ST]">
-                    <div class="bg-white text-center p-3 position-relative mt-n4 mx-3 product-desc">
-                        <h5 class="text-primary mb-0">NON SILICONISED STRAIGHT BRUSH PILE WEATHER STRIP [NS ST]</h5>
-                    </div>
-                </a>
-
-                <!-- 4 -->
-                <a href="Product-m4.html" class="d-block product-item rounded text-center">
-                    <img class="magnifier-target" src="img/4.webp" alt="SELF ADHESIVE NON SILICONSIED PILE WEATHER STRIP [AD WS]">
-                    <div class="bg-white text-center p-3 position-relative mt-n4 mx-3 product-desc">
-                        <h5 class="text-primary mb-0">SELF ADHESIVE NON SILICONSIED PILE WEATHER STRIP [AD WS]</h5>
-                    </div>
-                </a>
-
-                <!-- 5 -->
-                <a href="Product.m5.html" class="d-block product-item rounded text-center">
-                    <img class="magnifier-target" src="img/5(1).png" alt="SILICONISED PILE WEATHER STRIP [SL]">
-                    <div class="bg-white text-center p-3 position-relative mt-n4 mx-3 product-desc">
-                        <h5 class="text-primary mb-0">SILICONISED PILE WEATHER STRIP [SL]</h5>
-                    </div>
-                </a>
-
-                <!-- 6 -->
-                <a href="Product.m6.html" class="d-block product-item rounded text-center">
-                    <img class="magnifier-target" src="img/6.webp" alt="NON-WOVEN (PP) QUIET FIN PILE WEATHER STRIP [QFIN SL UV]">
-                    <div class="bg-white text-center p-3 position-relative mt-n4 mx-3 product-desc">
-                        <h5 class="text-primary mb-0">NON-WOVEN (PP) QUIET FIN PILE WEATHER STRIP [QFIN SL UV] -
-                            SILICONISED & UV STABILIZED</h5>
-                    </div>
-                </a>
-
-                <!-- 7 -->
-                <a href="Product.m7.html" class="d-block product-item rounded text-center">
-                    <img class="magnifier-target" src="img/7.webp" alt="TRANSPARENT (PP) FIN PILE WEATHER STRIP [TN FIN SL UV]">
-                    <div class="bg-white text-center p-3 position-relative mt-n4 mx-3 product-desc">
-                        <h5 class="text-primary mb-0">TRANSPARENT (PP) FIN PILE WEATHER STRIP [TN FIN SL UV] -
-                            SILICONISED & UV STABILIZED</h5>
-                    </div>
-                </a>
-
-                <!-- 8 -->
-                <a href="Product.m8.html" class="d-block product-item rounded text-center">
-
-                        <!-- IMAGE FRAME -->
-                        <div class="product-img-wrap">
-                            <img 
-                                src="img/8(2).jpg"
-                                alt="TRI FIN PILE WEATHER STRIP [TRIFIN SL UV]"
-                                class="product-img magnifier-target"
-                                style="transform: scale(0.99);"
-                            >
-                        </div>
-
-                        <!-- CAPTION -->
-                        <h6> </h6>
-                        <div class="bg-white text-center p-2 position-relative mt-n4 mx-3 product-desc">
-                            <h5 class="text-primary mb-0">
-                                TRI FIN PILE WEATHER STRIP [TRIFIN SL UV] - EXTRUDED, SILICONISED & UV STABILISED
-                            </h5>
-                        </div>
-                </a>
-
-
-
-
-                    <!-- 9 -->
-                    <a href="Product.m9.html" class="d-block product-item rounded text-center">
-                        <img class="magnifier-target" src="img/9.webp" alt="SILICONISED WEATHER STRIP WITH BRISTLE [SL BR]">
-                        <div class="bg-white text-center p-3 position-relative mt-n4 mx-3 product-desc">
-                            <h5 class="text-primary mb-0">SILICONISED WEATHER STRIP WITH BRISTLE [SL BR]</h5>
-                        </div>
-                    </a>
-
-            </div>
+      <div class="container py-5">
+        <div
+          class="section-title text-center mx-auto wow fadeInUp"
+          data-wow-delay="0.1s"
+          style="max-width: 600px"
+        >
+          <p
+            class="text-primary"
+            style="color: #000 !important; font-weight: 600; font-size: 24px"
+          >
+            Our Products
+          </p>
+          <h2 class="display-6" style="color: #000 !important">
+            Ultimate Effective Pile Weather Strip
+          </h2>
+          <p class="text-muted" style="color: #000 !important">
+            We manufacture a wide array of high-performance pile weather strips,
+            <br />fully customized to meet precise specifications of size, pile
+            density, color & types for fenestration industry.
+          </p>
         </div>
+
+        <div
+          class="owl-carousel product-carousel wow fadeInUp"
+          data-wow-delay="0.5s"
+        >
+          <!-- 1 -->
+          <a
+            href="Product-m1.html"
+            class="product-item d-flex flex-column rounded text-center"
+            style="height: 420px"
+          >
+            <div class="img-box">
+              <img
+                class="magnifier-target"
+                src="img/1.webp"
+                alt="NON SILICONISED PILE WEATHER STRIP [NS]"
+                style="object-fit: cover; object-position: center 80%"
+              />
+            </div>
+
+            <div
+              class="bg-white text-center p-3 position-relative mt-n4 mx-3 product-desc"
+            >
+              <h5 class="text-primary mb-0">
+                NON SILICONISED PILE WEATHER STRIP [NS]
+              </h5>
+            </div>
+          </a>
+
+          <!-- 2 -->
+          <a
+            href="Product-m2.html"
+            class="d-block product-item rounded text-center"
+          >
+            <img
+              class="magnifier-target"
+              src="img/2.webp"
+              alt="NON SILICONISED HIGH DENSITY PILE WEATHER STRIP [NS HD]"
+            />
+            <div
+              class="bg-white text-center p-3 position-relative mt-n4 mx-3 product-desc"
+            >
+              <h5 class="text-primary mb-0">
+                NON SILICONISED HIGH DENSITY PILE WEATHER STRIP [NS HD]
+              </h5>
+            </div>
+          </a>
+
+          <!-- 3 -->
+          <a
+            href="Product-m3.html"
+            class="d-block product-item rounded text-center"
+          >
+            <img
+              class="magnifier-target"
+              src="img/3.webp"
+              alt="NON SILICONISED STRAIGHT BRUSH PILE WEATHER STRIP [NS ST]"
+            />
+            <div
+              class="bg-white text-center p-3 position-relative mt-n4 mx-3 product-desc"
+            >
+              <h5 class="text-primary mb-0">
+                NON SILICONISED STRAIGHT BRUSH PILE WEATHER STRIP [NS ST]
+              </h5>
+            </div>
+          </a>
+
+          <!-- 4 -->
+          <a
+            href="Product-m4.html"
+            class="d-block product-item rounded text-center"
+          >
+            <img
+              class="magnifier-target"
+              src="img/4.webp"
+              alt="SELF ADHESIVE NON SILICONSIED PILE WEATHER STRIP [AD WS]"
+            />
+            <div
+              class="bg-white text-center p-3 position-relative mt-n4 mx-3 product-desc"
+            >
+              <h5 class="text-primary mb-0">
+                SELF ADHESIVE NON SILICONSIED PILE WEATHER STRIP [AD WS]
+              </h5>
+            </div>
+          </a>
+
+          <!-- 5 -->
+          <a
+            href="Product.m5.html"
+            class="d-block product-item rounded text-center"
+          >
+            <img
+              class="magnifier-target"
+              src="img/5(1).png"
+              alt="SILICONISED PILE WEATHER STRIP [SL]"
+            />
+            <div
+              class="bg-white text-center p-3 position-relative mt-n4 mx-3 product-desc"
+            >
+              <h5 class="text-primary mb-0">
+                SILICONISED PILE WEATHER STRIP [SL]
+              </h5>
+            </div>
+          </a>
+
+          <!-- 6 -->
+          <a
+            href="Product.m6.html"
+            class="d-block product-item rounded text-center"
+          >
+            <img
+              class="magnifier-target"
+              src="img/6.webp"
+              alt="NON-WOVEN (PP) QUIET FIN PILE WEATHER STRIP [QFIN SL UV]"
+            />
+            <div
+              class="bg-white text-center p-3 position-relative mt-n4 mx-3 product-desc"
+            >
+              <h5 class="text-primary mb-0">
+                NON-WOVEN (PP) QUIET FIN PILE WEATHER STRIP [QFIN SL UV] -
+                SILICONISED & UV STABILIZED
+              </h5>
+            </div>
+          </a>
+
+          <!-- 7 -->
+          <a
+            href="Product.m7.html"
+            class="d-block product-item rounded text-center"
+          >
+            <img
+              class="magnifier-target"
+              src="img/7.webp"
+              alt="TRANSPARENT (PP) FIN PILE WEATHER STRIP [TN FIN SL UV]"
+            />
+            <div
+              class="bg-white text-center p-3 position-relative mt-n4 mx-3 product-desc"
+            >
+              <h5 class="text-primary mb-0">
+                TRANSPARENT (PP) FIN PILE WEATHER STRIP [TN FIN SL UV] -
+                SILICONISED & UV STABILIZED
+              </h5>
+            </div>
+          </a>
+
+          <!-- 8 -->
+          <a
+            href="Product.m8.html"
+            class="d-block product-item rounded text-center"
+          >
+            <!-- IMAGE FRAME -->
+            <div class="product-img-wrap">
+              <img
+                src="img/8(2).png"
+                alt="TRI FIN PILE WEATHER STRIP [TRIFIN SL UV]"
+                class="product-img magnifier-target"
+                style="transform: scale(0.99)"
+              />
+            </div>
+
+            <!-- CAPTION -->
+            <h6></h6>
+            <div
+              class="bg-white text-center p-2 position-relative mt-n4 mx-3 product-desc"
+            >
+              <h5 class="text-primary mb-0">
+                TRI FIN PILE WEATHER STRIP [TRIFIN SL UV] - EXTRUDED,
+                SILICONISED & UV STABILISED
+              </h5>
+            </div>
+          </a>
+
+          <!-- 9 -->
+          <a
+            href="Product.m9.html"
+            class="d-block product-item rounded text-center"
+          >
+            <img
+              class="magnifier-target"
+              src="img/9.webp"
+              alt="SILICONISED WEATHER STRIP WITH BRISTLE [SL BR]"
+            />
+            <div
+              class="bg-white text-center p-3 position-relative mt-n4 mx-3 product-desc"
+            >
+              <h5 class="text-primary mb-0">
+                SILICONISED WEATHER STRIP WITH BRISTLE [SL BR]
+              </h5>
+            </div>
+          </a>
+        </div>
+      </div>
     </div>
     <!-- Products End -->
     <!-- catalog open start -->
@@ -348,136 +497,163 @@
         <iframe src="img/catlog/PRECISION BROCHURE.pdf" width="100%" height="600px" style="border:none;"></iframe>
      </div>-->
 
-
     <!-- catalog open start -->
     <div class="container-fluid catalog-open py-5">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6 text-center mb-4 mb-md-0">
-                    <!-- Use a preview image for the brochure; replace with a real preview if available -->
-                    <img src="img/pdf-img.png" alt="Brochure preview" class="img-fluid rounded shadow"
-                        style="max-height:420px; width: auto;">
-                </div>
-                <div class="col-md-6 right">
-                    <h3 class="text-primary">Precision Brochure</h3>
-                    <div class="content">
-                        <p class="text-muted" style="font-size: large;">The precision brochure is a professionally
-                            designed product catalogue showcasing a detailed range of precision-engineering products. It
-                            features visually structured product layouts, technical specifications, model numbers, and
-                            images to help customers and distributors understand the complete product lineup.</p>
-                        <p class="text-muted" style="font-size: large;">This catalogue offers a clear and concise
-                            overview of the available products, making it useful for technical reference, product
-                            selection, and comparison.</p>
-                        <p class="text-muted" style="font-size: large;">Download our full product brochure to view
-                            specifications, sizes, and ordering information.</p>
-                    </div>
-                    <div class="buttons d-flex gap-4">
-                        <a href="./img/catlog/PWS 2025-2026.pdf" class="btn btn-download" target="_blank"
-                            rel="noopener noreferrer" download>
-                            <i class="fa fa-download me-2"></i>Download PDF
-                        </a>
-                        <a href="./img/catlog/PWS 2025-2026.pdf" class="btn btn-view" target="_blank"
-                            rel="noopener noreferrer">
-                            <i class="fa fa-eye me-2"></i>View in Browser
-                        </a>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center mb-4 mb-md-0">
+            <!-- Use a preview image for the brochure; replace with a real preview if available -->
+            <img
+              src="img/pdf-img.png"
+              alt="Brochure preview"
+              class="img-fluid rounded shadow"
+              style="max-height: 420px; width: auto"
+            />
+          </div>
+          <div class="col-md-6 right">
+            <h3 class="text-primary">Precision Brochure</h3>
+            <div class="content">
+              <p class="text-muted" style="font-size: large">
+                The precision brochure is a professionally designed product
+                catalogue showcasing a detailed range of precision-engineering
+                products. It features visually structured product layouts,
+                technical specifications, model numbers, and images to help
+                customers and distributors understand the complete product
+                lineup.
+              </p>
+              <p class="text-muted" style="font-size: large">
+                This catalogue offers a clear and concise overview of the
+                available products, making it useful for technical reference,
+                product selection, and comparison.
+              </p>
+              <p class="text-muted" style="font-size: large">
+                Download our full product brochure to view specifications,
+                sizes, and ordering information.
+              </p>
             </div>
+            <div class="buttons d-flex gap-4">
+              <a
+                href="./img/catlog/PWS 2025-2026.pdf"
+                class="btn btn-download"
+                target="_blank"
+                rel="noopener noreferrer"
+                download
+              >
+                <i class="fa fa-download me-2"></i>Download PDF
+              </a>
+              <a
+                href="./img/catlog/PWS 2025-2026.pdf"
+                class="btn btn-view"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fa fa-eye me-2"></i>View in Browser
+              </a>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
     <!-- catalog open end -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     <!-- catalog open end -->
 
     <!-- Footer Start -->
-    <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container pt-5 pb-4">
-            <div class="row g-5 justify-content-around">
-                <div class="col-lg-7 col-md-6">
-                    <h4 class="text-primary mb-4">Corporate Headquarters & Manufacturing Unit</h4>
-                    <!-- <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>Plot No. 1 To 8 , TYPE - A, RS NO. 51/1, SHREEDHAR VARDHAN<br>INDUSTRIAL PARK, ALURA, KAMREJ, SURAT - 394310. </p> -->
-                    <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>Plot No. 1 To 8 , Type - A, Rs
-                        No. 51/1, Shreedhar Vardhan<br>Industrial Park, Alura, Kamrej, Surat - 394310. </p>
-                    <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i>+91 8000077955</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i>+91 9898377955</p>
+    <div
+      class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="container pt-5 pb-4">
+        <div class="row g-5 justify-content-around">
+          <div class="col-lg-7 col-md-6">
+            <h4 class="text-primary mb-4">
+              Corporate Headquarters & Manufacturing Unit
+            </h4>
+            <!-- <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>Plot No. 1 To 8 , TYPE - A, RS NO. 51/1, SHREEDHAR VARDHAN<br>INDUSTRIAL PARK, ALURA, KAMREJ, SURAT - 394310. </p> -->
+            <p class="mb-2">
+              <i class="fa fa-map-marker-alt text-primary me-3"></i>Plot No. 1
+              To 8 , Type - A, Rs No. 51/1, Shreedhar Vardhan<br />Industrial
+              Park, Alura, Kamrej, Surat - 394310.
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-phone-alt text-primary me-3"></i>+91 8000077955
+            </p>
+            <p class="mb-2">
+              <i class="fa fa-phone-alt text-primary me-3"></i>+91 9898377955
+            </p>
 
-                    <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>precision_weatherstrip@yahoo.com</p>
-                    <div class="d-flex pt-3">
-                        <a class="btn btn-square btn-primary rounded-circle me-2"
-                            href="https://www.instagram.com/precision_pileweatherstrip?utm_source=qr&igsh=aG1kYXQzZTNvNmph"><i
-                                class="fab fa-instagram"></i></a>
-                        <!-- <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i
+            <p class="mb-2">
+              <i class="fa fa-envelope text-primary me-3"></i
+              >precision_weatherstrip@yahoo.com
+            </p>
+            <div class="d-flex pt-3">
+              <a
+                class="btn btn-square btn-primary rounded-circle me-2"
+                href="https://www.instagram.com/precision_pileweatherstrip?utm_source=qr&igsh=aG1kYXQzZTNvNmph"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <!-- <a class="btn btn-square btn-primary rounded-circle me-2" href=""><i
                                 class="fab fa-twitter"></i></a> -->
-                        <a class="btn btn-square btn-primary rounded-circle me-2"
-                            href="https://www.facebook.com/Precisionpileweatherstrip"><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-primary rounded-circle me-2" href="https://www.youtube.com/@Precisionweatherstrip" target="_blank" rel="noopener noreferrer"><i
-                                class="fab fa-youtube"></i></a>
-                        <a class="btn btn-square btn-primary rounded-circle me-2"
-                            href="https://www.linkedin.com/company/precision-weather-strip/?viewAsMember=true"><i
-                                class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-primary mb-4">Quick Links</h4>
-                    <a class="btn btn-link" href="about.html">About Us</a>
-                    <a class="btn btn-link" href="product.html">Products</a>
-                    <a class="btn btn-link" href="contact.html">Contact Us</a>
-                    
+              <a
+                class="btn btn-square btn-primary rounded-circle me-2"
+                href="https://www.facebook.com/Precisionpileweatherstrip"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                class="btn btn-square btn-primary rounded-circle me-2"
+                href="https://www.youtube.com/@Precisionweatherstrip"
+                target="_blank"
+                rel="noopener noreferrer"
+                ><i class="fab fa-youtube"></i
+              ></a>
+              <a
+                class="btn btn-square btn-primary rounded-circle me-2"
+                href="https://www.linkedin.com/company/precision-weather-strip/?viewAsMember=true"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6">
+            <h4 class="text-primary mb-4">Quick Links</h4>
+            <a class="btn btn-link" href="about.html">About Us</a>
+            <a class="btn btn-link" href="product.html">Products</a>
+            <a class="btn btn-link" href="contact.html">Contact Us</a>
 
-                    <!-- <a class="btn btn-link" href="">Our Services</a>
+            <!-- <a class="btn btn-link" href="">Our Services</a>
                     <a class="btn btn-link" href="">Terms & Condition</a>
                     <a class="btn btn-link" href="">Support</a> -->
-                </div>
-                <!-- <div class="col-lg-4 col-md-6">
+          </div>
+          <!-- <div class="col-lg-4 col-md-6">
                     <h4 class="text-primary mb-4">Business Hours</h4>
                     <p class="mb-1">Monday - Saturday</p>
                     <h6 class="text-light">09:00 am - 06:00 pm</h6>
                     <p class="mb-1">Sunday</p>
                     <h6 class="text-light">Closed</h6>
                 </div> -->
-
-            </div>
         </div>
+      </div>
     </div>
     <!-- Footer End -->
 
-
     <!-- Copyright Start -->
     <div class="container-fluid copyright py-4">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a class="fw-medium" href="#">Precision Weather Strips</a>, All Right Reserved.
-                </div>
-
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+            &copy; <a class="fw-medium" href="#">Precision Weather Strips</a>,
+            All Right Reserved.
+          </div>
         </div>
+      </div>
     </div>
     <!-- Copyright End -->
 
-
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i
-            class="bi bi-arrow-up"></i></a>
-
+    <a
+      href="#"
+      class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"
+      ><i class="bi bi-arrow-up"></i
+    ></a>
 
     <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
@@ -489,6 +665,5 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
-</body>
-
+  </body>
 </html>
